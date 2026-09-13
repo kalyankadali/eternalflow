@@ -163,7 +163,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "pending"}
-        className="rounded-full bg-ef-accent px-5 py-2.5 text-sm font-medium text-white hover:bg-ef-accent-strong disabled:opacity-60"
+        className="rounded-full bg-ef-accent px-5 py-2.5 text-sm font-medium text-ef-on-accent hover:bg-ef-accent-strong disabled:opacity-60"
       >
         {status === "pending" ? "Sending…" : "Book free website review"}
       </button>

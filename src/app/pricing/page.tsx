@@ -1,18 +1,26 @@
 import { ButtonLink } from "@/components/Button";
+import { CtaBand } from "@/components/CtaBand";
 import { Section } from "@/components/Section";
-import { alwaysIncluded, comparisonRows, pricingTiers } from "@/lib/pricing";
-import { pageTitle } from "@/lib/site";
+import {
+  alwaysIncluded,
+  comparisonRows,
+  pricingAddOns,
+  pricingFaqs,
+  pricingTiers,
+} from "@/lib/pricing";
+import { pageMeta } from "@/lib/seo";
 
 export const metadata = {
-  title: { absolute: pageTitle("Pricing") },
-  description:
-    "Clear packages for real estate websites — Starter, Growth, and Pro. No proposal theatre.",
+  title: { absolute: pageMeta.pricing.title },
+  description: pageMeta.pricing.description,
 };
 
 function cellValue(v: boolean | string) {
   if (typeof v === "string") return v;
   return v ? "Yes" : "—";
 }
+
+const priceLine = pricingTiers.map((t) => `${t.name} ${t.priceLabel}`).join(", ");
 
 export default function PricingPage() {
   return (
@@ -23,8 +31,8 @@ export default function PricingPage() {
             Clear packages. No proposal theatre.
           </h1>
           <p className="mt-4 text-ef-muted">
-            Productized tiers for real estate businesses and agents. Clear
-            public pricing — book a free review to pick the right fit.
+            Productized websites for real estate projects and agents. Deliverables
+            and INR listed — {priceLine}.
           </p>
         </div>
 
@@ -47,7 +55,14 @@ export default function PricingPage() {
                 ) : null}
               </div>
               <p className="mt-2 text-sm text-ef-muted">{tier.blurb}</p>
-              <p className="mt-4 text-3xl font-semibold tracking-tight text-ef-ink">{tier.priceLabel}</p>
+              {tier.priceLabel ? (
+                <p className="mt-5 text-4xl font-semibold tracking-tight text-ef-ink">
+                  {tier.priceLabel}
+                </p>
+              ) : null}
+              {tier.priceNote ? (
+                <p className="mt-1 text-sm text-ef-muted">{tier.priceNote}</p>
+              ) : null}
               {tier.includesPrevious ? (
                 <p className="mt-4 text-xs font-medium uppercase tracking-wide text-ef-accent">
                   {tier.includesPrevious}
@@ -125,9 +140,14 @@ export default function PricingPage() {
 
       <Section>
         <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
-          Always included
+          Always in the box
         </h2>
-        <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+        <p className="mt-2 max-w-2xl text-ef-muted">
+          Custom design and copywriting, mobile-friendly build, hosting, security,
+          SSL, daily backups, and unlimited updates on membership. You don&apos;t
+          fight for the basics.
+        </p>
+        <ul className="mt-6 grid gap-2 sm:grid-cols-2">
           {alwaysIncluded.map((item) => (
             <li
               key={item}
@@ -137,12 +157,53 @@ export default function PricingPage() {
             </li>
           ))}
         </ul>
-        <div className="mt-10 text-center">
-          <ButtonLink href="/get-started" size="lg">
-            Book free review
-          </ButtonLink>
+      </Section>
+
+      <Section alt>
+        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
+          Add-ons (optional)
+        </h2>
+        <p className="mt-2 text-sm text-ef-muted">
+          Marked clearly so buyers don&apos;t assume they&apos;re in every package.
+        </p>
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+          {pricingAddOns.map((item) => (
+            <li
+              key={item.name}
+              className="flex items-center justify-between rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface px-4 py-3 text-sm"
+            >
+              <span className="text-ef-ink">{item.name}</span>
+              <span className="rounded-full bg-ef-accent-muted px-2.5 py-0.5 text-xs font-medium text-ef-accent">
+                {item.status}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section>
+        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
+          Pricing questions
+        </h2>
+        <div className="mt-6 space-y-3">
+          {pricingFaqs.map((faq) => (
+            <details
+              key={faq.q}
+              className="rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface px-5 py-4"
+            >
+              <summary className="cursor-pointer font-medium text-ef-ink">
+                {faq.q}
+              </summary>
+              <p className="mt-3 text-sm text-ef-muted">{faq.a}</p>
+            </details>
+          ))}
         </div>
       </Section>
+
+      <CtaBand
+        h2="Not sure which package fits?"
+        body="Book a free website review. We'll map Starter, Growth, or Pro to how you get enquiries today."
+      />
     </>
   );
 }

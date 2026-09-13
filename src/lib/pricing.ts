@@ -7,6 +7,8 @@ export type PricingTier = {
   blurb: string;
   /** R1-locked public INR display */
   priceLabel: string;
+  /** Optional cadence note under the price (e.g. one-time project) */
+  priceNote?: string;
   popular?: boolean;
   /** Chip label when popular — default "Most popular" */
   popularLabel?: string;
@@ -31,7 +33,8 @@ export const pricingTiers: PricingTier[] = [
     name: "Starter",
     blurb: "A sharp 5-page site, shipped in four weeks.",
     priceLabel: "₹24,999",
-    ctaLabel: "Talk to us",
+    priceNote: "one-time project",
+    ctaLabel: "Book a free website review",
     features: [
       "5-page custom website",
       "Mobile-friendly design",
@@ -47,9 +50,10 @@ export const pricingTiers: PricingTier[] = [
     name: "Growth",
     blurb: "Site + CRM + chat — the core stack for enquiries and follow-up.",
     priceLabel: "₹39,999",
+    priceNote: "one-time project",
     popular: true,
     popularLabel: "Most popular",
-    ctaLabel: "Book free review",
+    ctaLabel: "Book a free website review",
     includesPrevious: "Everything in Starter, plus",
     features: [
       "CRM integration and setup",
@@ -65,7 +69,8 @@ export const pricingTiers: PricingTier[] = [
     name: "Pro",
     blurb: "Automations and AI on top of the Growth stack.",
     priceLabel: "₹59,999",
-    ctaLabel: "Talk to us",
+    priceNote: "one-time project",
+    ctaLabel: "Book a free website review",
     includesPrevious: "Everything in Growth, plus",
     features: [
       "Custom automated workflows and CRM updates built for your pipeline",
