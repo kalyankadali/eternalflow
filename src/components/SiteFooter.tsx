@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { Container } from "./Container";
+import { Logo } from "./Logo";
 import { WhatsAppLink } from "./WhatsAppLink";
+import Link from "next/link";
 
 const columns = [
   {
@@ -33,36 +34,33 @@ const columns = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto border-t border-ef-border bg-ef-surface">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="space-y-3">
-          <div className="flex items-center gap-2 font-semibold">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-ef-accent text-sm font-bold text-white">
-              Ef
-            </span>
-            Eternalflow
-          </div>
-          <p className="text-sm text-ef-muted">
+    <footer className="mt-auto border-t border-ef-border bg-ef-surface-2">
+      <Container className="grid gap-7 py-12 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
+        <div className="space-y-3 text-[15px] leading-relaxed text-ef-muted">
+          <Logo />
+          <p>
             Productized websites, CRM &amp; ads for real estate in India.
           </p>
-          <p className="text-sm text-ef-muted">
+          <p>
             Based in {siteConfig.location.city}, {siteConfig.location.region}
           </p>
           <a
             href={`mailto:${siteConfig.email}`}
-            className="block text-sm text-ef-accent hover:underline"
+            className="block text-sm text-ef-muted no-underline hover:text-ef-accent"
           >
             {siteConfig.email}
           </a>
-          <WhatsAppLink className="inline-flex text-sm font-medium text-ef-accent hover:underline" />
+          <WhatsAppLink className="inline-flex text-sm font-medium text-ef-muted no-underline hover:text-ef-accent" />
         </div>
         {columns.map((col) => (
           <div key={col.title}>
-            <h3 className="mb-3 text-sm font-semibold text-ef-ink">{col.title}</h3>
-            <ul className="space-y-2 text-sm text-ef-muted">
+            <strong className="mb-2.5 block text-[13px] font-semibold uppercase tracking-wider text-ef-ink">
+              {col.title}
+            </strong>
+            <ul className="space-y-1.5 text-sm">
               {col.links.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="hover:text-ef-accent">
+                  <Link href={l.href} className="text-ef-muted no-underline hover:text-ef-accent">
                     {l.label}
                   </Link>
                 </li>

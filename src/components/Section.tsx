@@ -6,15 +6,21 @@ type Props = {
   className?: string;
   id?: string;
   alt?: boolean;
+  wash?: boolean;
   containerClassName?: string;
 };
 
-export function Section({ children, className = "", id, alt, containerClassName = "" }: Props) {
+export function Section({
+  children,
+  className = "",
+  id,
+  alt,
+  wash,
+  containerClassName = "",
+}: Props) {
+  const tone = wash ? "ef-alt-wash" : alt ? "ef-alt" : "";
   return (
-    <section
-      id={id}
-      className={`py-14 sm:py-20 ${alt ? "bg-ef-surface-2/80" : ""} ${className}`}
-    >
+    <section id={id} className={`relative py-16 sm:py-[88px] ${tone} ${className}`}>
       <Container className={containerClassName}>{children}</Container>
     </section>
   );

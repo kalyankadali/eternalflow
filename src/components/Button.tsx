@@ -3,17 +3,17 @@ import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 const variants = {
   primary:
-    "bg-ef-accent text-ef-on-accent hover:bg-ef-accent-strong shadow-sm",
+    "bg-ef-accent text-ef-on-accent shadow-[var(--ef-shadow-sm)] hover:bg-ef-accent-strong hover:shadow-[var(--ef-shadow-md)] hover:-translate-y-px active:translate-y-px",
   secondary:
-    "border border-ef-accent text-ef-accent bg-transparent hover:bg-ef-accent-muted",
+    "border-[1.5px] border-ef-accent text-ef-accent bg-[color-mix(in_srgb,var(--ef-surface)_70%,transparent)] backdrop-blur-sm hover:bg-ef-accent-muted hover:text-ef-accent-strong hover:-translate-y-px active:translate-y-px",
   ghost:
     "text-ef-muted hover:text-ef-ink hover:bg-ef-surface-2",
 } as const;
 
 const sizes = {
-  sm: "px-3.5 py-1.5 text-sm",
-  md: "px-5 py-2.5 text-sm",
-  lg: "px-6 py-3 text-base",
+  sm: "px-3.5 py-2 text-[13px]",
+  md: "px-[18px] py-[11px] text-sm",
+  lg: "px-[26px] py-3.5 text-base",
 } as const;
 
 type Variant = keyof typeof variants;
@@ -27,7 +27,7 @@ type Common = {
 };
 
 function classes(variant: Variant, size: Size, className: string) {
-  return `inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ef-ring disabled:opacity-60 ${variants[variant]} ${sizes[size]} ${className}`;
+  return `inline-flex items-center justify-center gap-2 rounded-full font-semibold leading-tight transition-[background-color,border-color,color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ef-ring disabled:pointer-events-none disabled:opacity-50 ${variants[variant]} ${sizes[size]} ${className}`;
 }
 
 export function Button({

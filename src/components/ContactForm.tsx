@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { Button } from "./Button";
 
 type Status = "idle" | "pending" | "success" | "error";
 
@@ -53,7 +54,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="mx-auto flex w-full max-w-lg flex-col gap-4"
+      className="relative flex w-full flex-col gap-3.5"
       noValidate
     >
       {/* Honeypot — visually hidden, not display:none */}
@@ -72,7 +73,7 @@ export function ContactForm() {
         />
       </div>
 
-      <label className="flex flex-col gap-1 text-sm text-ef-ink">
+      <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ef-ink">
         <span>Your name</span>
         <input
           name="name"
@@ -80,38 +81,38 @@ export function ContactForm() {
           required
           maxLength={120}
           placeholder="Full name"
-          className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
+          className="ef-field font-normal placeholder:text-ef-muted"
         />
       </label>
 
-      <label className="flex flex-col gap-1 text-sm text-ef-ink">
+      <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ef-ink">
         <span>Phone</span>
         <input
           name="phone"
           type="tel"
           required
           placeholder="10-digit mobile"
-          className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
+          className="ef-field font-normal placeholder:text-ef-muted"
         />
       </label>
 
-      <label className="flex flex-col gap-1 text-sm text-ef-ink">
+      <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ef-ink">
         <span>WhatsApp number</span>
         <input
           name="whatsapp"
           type="tel"
           placeholder="Same as phone? We’ll use this to reply"
-          className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
+          className="ef-field font-normal placeholder:text-ef-muted"
         />
       </label>
 
-      <label className="flex flex-col gap-1 text-sm text-ef-ink">
+      <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ef-ink">
         <span>I am a…</span>
         <select
           name="role"
           required
           defaultValue=""
-          className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
+          className="ef-field font-normal placeholder:text-ef-muted"
         >
           <option value="" disabled>
             Select…
@@ -124,23 +125,23 @@ export function ContactForm() {
         </select>
       </label>
 
-      <label className="flex flex-col gap-1 text-sm text-ef-ink">
+      <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ef-ink">
         <span>Current website</span>
         <input
           name="website"
           type="url"
           placeholder="Optional — paste URL or leave blank"
-          className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
+          className="ef-field font-normal placeholder:text-ef-muted"
         />
       </label>
 
-      <label className="flex flex-col gap-1 text-sm text-ef-ink">
+      <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ef-ink">
         <span>Package interest</span>
         <select
           name="package"
           required
           defaultValue=""
-          className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
+          className="ef-field font-normal placeholder:text-ef-muted"
         >
           <option value="" disabled>
             Select…
@@ -153,14 +154,14 @@ export function ContactForm() {
         </select>
       </label>
 
-      <label className="flex flex-col gap-1 text-sm text-ef-ink">
+      <label className="flex flex-col gap-1.5 text-[13px] font-semibold text-ef-ink">
         <span>Anything we should know?</span>
         <textarea
           name="message"
           rows={4}
           maxLength={2000}
           placeholder="Project launch, city, timeline…"
-          className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
+          className="ef-field font-normal placeholder:text-ef-muted"
         />
       </label>
 
@@ -168,13 +169,9 @@ export function ContactForm() {
         Fields marked required. We reply on WhatsApp within one business day.
       </p>
 
-      <button
-        type="submit"
-        disabled={status === "pending"}
-        className="rounded-full bg-ef-accent px-5 py-2.5 text-sm font-medium text-ef-on-accent hover:bg-ef-accent-strong disabled:opacity-60"
-      >
+      <Button type="submit" size="lg" disabled={status === "pending"} className="w-full">
         {status === "pending" ? "Sending…" : "Send my details"}
-      </button>
+      </Button>
 
       {status === "success" ? (
         <p className="text-sm text-emerald-700 dark:text-emerald-400" role="status">

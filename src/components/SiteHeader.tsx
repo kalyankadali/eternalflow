@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { ButtonLink } from "./Button";
 import { Container } from "./Container";
+import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 
 const nav = [
@@ -16,39 +18,61 @@ const nav = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ef-border/80 bg-ef-surface/90 backdrop-blur-md">
-      <Container className="flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight text-ef-ink">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-ef-accent text-sm font-bold text-white">
-            Ef
-          </span>
-          <span>Eternalflow</span>
-        </Link>
+    <header className={`ef-header ${scrolled ? "is-scrolled" : ""}`}>
+      <Container className="flex items-center justify-between gap-3 py-3">
+        <Logo />
 
-        <nav className="hidden items-center gap-6 text-sm text-ef-muted md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="transition-colors hover:text-ef-accent"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="hidden items-center gap-[22px] text-sm font-medium md:flex" aria-label="Primary">
+          {nav.map((item) => {
+            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative py-1 no-underline transition-colors ${
+                  active ? "text-ef-accent" : "text-ef-muted hover:text-ef-accent"
+                }`}
+              >
+                {item.label}
+                {active ? (
+                  <span className="absolute inset-x-0 -bottom-0.5 h-0.5 rounded-full bg-ef-accent" />
+                ) : null}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <ButtonLink href="/get-started" size="sm" className="hidden sm:inline-flex">
+          <ButtonLink href="/get-started" size="md" className="hidden sm:inline-flex">
             Book free review
           </ButtonLink>
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ef-border md:hidden"
-            aria-label="Open menu"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ef-border bg-ef-surface text-ef-ink shadow-[var(--ef-shadow-sm)] md:hidden"
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
+            aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
@@ -63,25 +87,21 @@ export function SiteHeader() {
       </Container>
 
       {open ? (
-        <div className="border-t border-ef-border bg-ef-surface md:hidden">
+        <div id="mobile-nav" className="border-t border-ef-border md:hidden">
           <Container className="flex flex-col gap-1 py-3">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-xl px-3 py-2 text-sm text-ef-ink hover:bg-ef-accent-muted"
+                className="rounded-xl px-3 py-3 text-sm font-medium text-ef-ink no-underline hover:bg-ef-accent-muted"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/get-started"
-              className="rounded-xl px-3 py-2 text-sm font-medium text-ef-accent"
-              onClick={() => setOpen(false)}
-            >
+            <ButtonLink href="/get-started" size="md" className="mt-1">
               Book free review
-            </Link>
+            </ButtonLink>
           </Container>
         </div>
       ) : null}

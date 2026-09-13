@@ -1,5 +1,5 @@
 import { ButtonLink } from "./Button";
-import { Section } from "./Section";
+import { Container } from "./Container";
 import { WhatsAppLink } from "./WhatsAppLink";
 
 type Props = {
@@ -17,24 +17,21 @@ export function CtaBand({
   primaryLabel = "Book a free website review",
   primaryHref = "/get-started",
   whatsapp = true,
-  alt = true,
 }: Props) {
   return (
-    <Section alt={alt}>
-      <div className="mx-auto max-w-2xl rounded-[var(--ef-radius-card-lg)] border border-ef-border bg-ef-accent-muted px-6 py-10 text-center sm:px-10">
-        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink sm:text-3xl">
-          {h2}
-        </h2>
-        <p className="mt-3 text-ef-muted">{body}</p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+    <div className="ef-cta-band">
+      <Container>
+        <h2 className="ef-sec-title mx-auto max-w-2xl">{h2}</h2>
+        <p className="mx-auto mt-2.5 max-w-xl text-[1.05rem] text-ef-muted">{body}</p>
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
           <ButtonLink href={primaryHref} size="lg">
             {primaryLabel}
           </ButtonLink>
           {whatsapp ? (
-            <WhatsAppLink className="inline-flex items-center justify-center rounded-full border border-ef-accent px-6 py-3 text-base font-medium text-ef-accent hover:bg-ef-surface" />
+            <WhatsAppLink className="inline-flex items-center justify-center rounded-full border-[1.5px] border-ef-accent bg-[color-mix(in_srgb,var(--ef-surface)_70%,transparent)] px-[26px] py-3.5 text-base font-semibold text-ef-accent backdrop-blur-sm transition-[background-color,transform] duration-200 hover:-translate-y-px hover:bg-ef-accent-muted hover:text-ef-accent-strong hover:no-underline" />
           ) : null}
         </div>
-      </div>
-    </Section>
+      </Container>
+    </div>
   );
 }

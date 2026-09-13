@@ -17,76 +17,74 @@ export const metadata = {
 
 function cellValue(v: boolean | string) {
   if (typeof v === "string") return v;
-  return v ? "Yes" : "—";
+  return v ? "✓" : "—";
 }
 
 const priceLine = pricingTiers.map((t) => `${t.name} ${t.priceLabel}`).join(", ");
 
+const incMarks = ["D", "C", "H", "∞", "+"] as const;
+
 export default function PricingPage() {
   return (
     <>
-      <Section className="pt-10">
-        <div className="mx-auto max-w-2xl text-center">
-          <h1 className="text-3xl font-semibold tracking-tight text-ef-ink sm:text-4xl">
+      <section className="relative overflow-hidden px-5 py-12 text-center md:px-7 sm:pt-12 sm:pb-6">
+        <div className="ef-orb absolute -top-20 left-[10%] h-[320px] w-[320px]" />
+        <div className="ef-orb absolute right-[8%] -bottom-16 h-[240px] w-[240px]" />
+        <div className="relative z-[1] mx-auto max-w-[1180px]">
+          <p className="ef-eyebrow mb-4">
+            <i className="dot" />
+            Starter · Growth · Pro
+          </p>
+          <h1 className="ef-display mx-auto max-w-[16ch]">
             Clear packages. No proposal theatre.
           </h1>
-          <p className="mt-4 text-ef-muted">
+          <p className="mx-auto mt-4 max-w-[46ch] text-[1.08rem] text-ef-muted">
             Productized websites for real estate projects and agents. Deliverables
             and INR listed — {priceLine}.
           </p>
         </div>
+      </section>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <Section className="pt-3 sm:pt-3">
+        <div className="grid items-stretch gap-4 lg:grid-cols-3 lg:py-3">
           {pricingTiers.map((tier) => (
             <article
               key={tier.id}
-              className={`flex flex-col rounded-[var(--ef-radius-card)] border bg-ef-surface p-6 shadow-[var(--ef-shadow-md)] ${
-                tier.popular
-                  ? "border-ef-accent ring-1 ring-ef-accent"
-                  : "border-ef-border"
-              }`}
+              className={`ef-price-card ${tier.popular ? "featured" : ""}`}
             >
-              <div className="flex items-center gap-2">
-                <h2 className="text-xl font-semibold text-ef-ink">{tier.name}</h2>
-                {tier.popular ? (
-                  <span className="rounded-full bg-ef-accent-muted px-2.5 py-0.5 text-xs font-medium text-ef-accent">
-                    {tier.popularLabel ?? "Most popular"}
-                  </span>
-                ) : null}
-              </div>
-              <p className="mt-2 text-sm text-ef-muted">{tier.blurb}</p>
+              {tier.popular ? (
+                <span className="ef-chip">{tier.popularLabel ?? "Most popular"}</span>
+              ) : null}
+              <h2 className="m-0 text-xl font-semibold text-ef-ink">{tier.name}</h2>
+              <p className="m-0 text-sm text-ef-muted">{tier.blurb}</p>
               {tier.priceLabel ? (
-                <p className="mt-5 text-4xl font-semibold tracking-tight text-ef-ink">
+                <p className="text-4xl font-semibold tracking-tight text-ef-ink">
                   {tier.priceLabel}
                 </p>
               ) : null}
               {tier.priceNote ? (
-                <p className="mt-1 text-sm text-ef-muted">{tier.priceNote}</p>
+                <p className="-mt-2 text-sm text-ef-muted">{tier.priceNote}</p>
               ) : null}
               {tier.includesPrevious ? (
-                <p className="mt-4 text-xs font-medium uppercase tracking-wide text-ef-accent">
+                <p className="text-xs font-medium uppercase tracking-wide text-ef-accent">
                   {tier.includesPrevious}
                 </p>
               ) : null}
-              <ul className="mt-4 flex-1 space-y-2 text-sm text-ef-ink">
+              <ul className="m-0 flex-1 list-none space-y-2 p-0 text-sm text-ef-muted">
                 {tier.features.map((f) => {
                   const badge = tier.featureBadges?.[f];
                   return (
-                    <li key={f} className="flex gap-2">
+                    <li key={f} className="flex gap-2 text-ef-ink">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ef-accent" />
                       <span>
                         {f}
-                        {badge ? (
-                          <span className="ml-2 rounded-full bg-ef-accent-muted px-2 py-0.5 text-xs font-medium text-ef-accent">
-                            {badge}
-                          </span>
-                        ) : null}
+                        {badge ? <span className="ef-ph ml-2">{badge}</span> : null}
                       </span>
                     </li>
                   );
                 })}
               </ul>
-              <div className="mt-6">
+              <div className="mt-2">
                 <ButtonLink
                   href="/get-started"
                   variant={tier.popular ? "primary" : "secondary"}
@@ -101,36 +99,38 @@ export default function PricingPage() {
       </Section>
 
       <Section alt>
-        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
-          Compare packages
-        </h2>
-        <p className="mt-2 text-sm text-ef-muted">
+        <h2 className="ef-sec-title text-center">Compare packages</h2>
+        <p className="ef-sec-lede mx-auto mb-6 text-center">
           Feature matrix for Starter, Growth, and Pro.
         </p>
-        <div className="mt-6 overflow-x-auto rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface">
-          <table className="w-full min-w-[36rem] text-left text-sm">
-            <thead className="border-b border-ef-border bg-ef-surface-2/80 text-ef-muted">
+        <div className="overflow-x-auto rounded-[var(--ef-radius-card-lg)] border border-ef-border bg-ef-surface shadow-[var(--ef-shadow-md)]">
+          <table className="w-full min-w-[36rem] border-collapse text-left text-[13px]">
+            <thead>
               <tr>
-                <th className="px-4 py-3 font-medium">Feature</th>
-                <th className="px-4 py-3 font-medium">Starter</th>
-                <th className="px-4 py-3 font-medium">Growth</th>
-                <th className="px-4 py-3 font-medium">Pro</th>
+                <th className="bg-ef-surface-2 px-4 py-3.5 font-semibold text-ef-ink">Feature</th>
+                <th className="bg-ef-surface-2 px-4 py-3.5 font-semibold text-ef-ink">Starter</th>
+                <th className="ef-col-g px-4 py-3.5 font-semibold">Growth</th>
+                <th className="bg-ef-surface-2 px-4 py-3.5 font-semibold text-ef-ink">Pro</th>
               </tr>
             </thead>
             <tbody>
               {comparisonRows.map((row) => (
                 <tr key={row.feature} className="border-b border-ef-border last:border-0">
-                  <td className="px-4 py-3 text-ef-ink">
+                  <td className="px-4 py-3.5 text-ef-ink">
                     {row.feature}
-                    {row.badge ? (
-                      <span className="ml-2 rounded-full bg-ef-accent-muted px-2 py-0.5 text-xs font-medium text-ef-accent">
-                        {row.badge}
-                      </span>
-                    ) : null}
+                    {row.badge ? <span className="ef-ph ml-2">{row.badge}</span> : null}
                   </td>
-                  <td className="px-4 py-3 text-ef-muted">{cellValue(row.starter)}</td>
-                  <td className="px-4 py-3 text-ef-muted">{cellValue(row.growth)}</td>
-                  <td className="px-4 py-3 text-ef-muted">{cellValue(row.pro)}</td>
+                  <td className={`px-4 py-3.5 text-ef-muted ${row.starter === true ? "ef-check" : ""}`}>
+                    {cellValue(row.starter)}
+                  </td>
+                  <td
+                    className={`ef-col-g px-4 py-3.5 text-ef-muted ${row.growth === true ? "ef-check" : ""}`}
+                  >
+                    {cellValue(row.growth)}
+                  </td>
+                  <td className={`px-4 py-3.5 text-ef-muted ${row.pro === true ? "ef-check" : ""}`}>
+                    {cellValue(row.pro)}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -139,20 +139,19 @@ export default function PricingPage() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
-          Always in the box
-        </h2>
-        <p className="mt-2 max-w-2xl text-ef-muted">
+        <h2 className="ef-sec-title text-center">Always in the box</h2>
+        <p className="ef-sec-lede mx-auto mb-6 text-center">
           Custom design and copywriting, mobile-friendly build, hosting, security,
           SSL, daily backups, and unlimited updates on membership. You don&apos;t
           fight for the basics.
         </p>
-        <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-          {alwaysIncluded.map((item) => (
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {alwaysIncluded.map((item, i) => (
             <li
               key={item}
-              className="rounded-xl border border-ef-border bg-ef-surface px-4 py-3 text-sm text-ef-ink"
+              className="rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface px-4 py-[22px] text-center text-sm font-semibold text-ef-ink shadow-[var(--ef-shadow-sm)] transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[var(--ef-shadow-md)]"
             >
+              <div className="ef-icon-well mx-auto">{incMarks[i] ?? "•"}</div>
               {item}
             </li>
           ))}
@@ -160,41 +159,27 @@ export default function PricingPage() {
       </Section>
 
       <Section alt>
-        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
-          Add-ons (optional)
-        </h2>
-        <p className="mt-2 text-sm text-ef-muted">
+        <h2 className="ef-sec-title text-center">Add-ons (optional)</h2>
+        <p className="ef-sec-lede mx-auto mb-6 text-center">
           Marked clearly so buyers don&apos;t assume they&apos;re in every package.
         </p>
-        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+        <ul className="grid gap-3 sm:grid-cols-2">
           {pricingAddOns.map((item) => (
-            <li
-              key={item.name}
-              className="flex items-center justify-between rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface px-4 py-3 text-sm"
-            >
-              <span className="text-ef-ink">{item.name}</span>
-              <span className="rounded-full bg-ef-accent-muted px-2.5 py-0.5 text-xs font-medium text-ef-accent">
-                {item.status}
-              </span>
+            <li key={item.name} className="ef-addon">
+              <span className="ef-ph">{item.status}</span>
+              <h3 className="mt-2.5 mb-1.5 text-[1.05rem] font-semibold text-ef-ink">{item.name}</h3>
             </li>
           ))}
         </ul>
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
-          Pricing questions
-        </h2>
-        <div className="mt-6 space-y-3">
+        <h2 className="ef-sec-title text-center">Pricing questions</h2>
+        <div className="ef-faq mx-auto mt-6 max-w-[760px]">
           {pricingFaqs.map((faq) => (
-            <details
-              key={faq.q}
-              className="rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface px-5 py-4"
-            >
-              <summary className="cursor-pointer font-medium text-ef-ink">
-                {faq.q}
-              </summary>
-              <p className="mt-3 text-sm text-ef-muted">{faq.a}</p>
+            <details key={faq.q}>
+              <summary>{faq.q}</summary>
+              <p className="pb-4 text-sm text-ef-muted">{faq.a}</p>
             </details>
           ))}
         </div>
