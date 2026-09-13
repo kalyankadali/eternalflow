@@ -141,7 +141,7 @@ export default function PricingPage() {
         <p className="ef-sec-lede mx-auto mb-6 text-center">
           Unlimited updates listed in your package. Starter, Growth, and Pro are
           one-off project fees. After launch, optional monthly maintenance keeps
-          copy, launches, and inventory current. Amount TBD — separate from the
+          copy, launches, and inventory current (₹4,999/mo) — separate from the
           one-off package fee.
         </p>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
