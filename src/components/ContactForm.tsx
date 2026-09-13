@@ -174,12 +174,12 @@ export function ContactForm() {
       </Button>
 
       {status === "success" ? (
-        <p className="text-sm text-emerald-700 dark:text-emerald-400" role="status">
+        <p className="text-sm font-medium text-ef-accent-strong" role="status">
           Got it — we&apos;ll reply on WhatsApp within one business day.
         </p>
       ) : null}
       {status === "error" ? (
-        <p className="text-sm text-red-700 dark:text-red-400" role="alert">
+        <p className="text-sm font-medium text-ef-ink" role="alert">
           Check the highlighted fields and try again.
         </p>
       ) : null}

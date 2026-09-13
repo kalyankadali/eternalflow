@@ -20,8 +20,6 @@ function cellValue(v: boolean | string) {
   return v ? "✓" : "—";
 }
 
-const priceLine = pricingTiers.map((t) => `${t.name} ${t.priceLabel}`).join(", ");
-
 const incMarks = ["D", "C", "H", "∞", "+"] as const;
 
 export default function PricingPage() {
@@ -39,8 +37,8 @@ export default function PricingPage() {
             Clear packages. No proposal theatre.
           </h1>
           <p className="mx-auto mt-4 max-w-[46ch] text-[1.08rem] text-ef-muted">
-            Productized websites for real estate projects and agents. Deliverables
-            and INR listed — {priceLine}.
+            Websites for real estate builders and agents. One-off fees — Starter
+            ₹24,999, Growth ₹39,999, Pro ₹59,999.
           </p>
         </div>
       </section>
@@ -107,7 +105,7 @@ export default function PricingPage() {
           <table className="w-full min-w-[36rem] border-collapse text-left text-[13px]">
             <thead>
               <tr>
-                <th className="bg-ef-surface-2 px-4 py-3.5 font-semibold text-ef-ink">Feature</th>
+                <th className="sticky left-0 z-[1] bg-ef-surface-2 px-4 py-3.5 font-semibold text-ef-ink">Feature</th>
                 <th className="bg-ef-surface-2 px-4 py-3.5 font-semibold text-ef-ink">Starter</th>
                 <th className="ef-col-g px-4 py-3.5 font-semibold">Growth</th>
                 <th className="bg-ef-surface-2 px-4 py-3.5 font-semibold text-ef-ink">Pro</th>
@@ -116,7 +114,7 @@ export default function PricingPage() {
             <tbody>
               {comparisonRows.map((row) => (
                 <tr key={row.feature} className="border-b border-ef-border last:border-0">
-                  <td className="px-4 py-3.5 text-ef-ink">
+                  <td className="sticky left-0 z-[1] bg-ef-surface px-4 py-3.5 text-ef-ink">
                     {row.feature}
                     {row.badge ? <span className="ef-ph ml-2">{row.badge}</span> : null}
                   </td>
@@ -142,9 +140,9 @@ export default function PricingPage() {
         <h2 className="ef-sec-title text-center">Always in the box</h2>
         <p className="ef-sec-lede mx-auto mb-6 text-center">
           Unlimited updates listed in your package. Starter, Growth, and Pro are
-          one-off project fees — not a membership. After launch, optional monthly
-          maintenance keeps copy, launches, and inventory current. Amount TBD —
-          separate from the one-off package fee.
+          one-off project fees. After launch, optional monthly maintenance keeps
+          copy, launches, and inventory current. Amount TBD — separate from the
+          one-off package fee.
         </p>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {alwaysIncluded.map((item, i) => (

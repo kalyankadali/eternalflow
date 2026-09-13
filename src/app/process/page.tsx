@@ -13,31 +13,29 @@ export default function ProcessPage() {
 
   return (
     <>
-      <Section className="pt-10">
-        <div className="mx-auto max-w-2xl">
-          <h1 className="text-3xl font-semibold tracking-tight text-ef-ink sm:text-4xl">
-            {hero.h1}
-          </h1>
-          <p className="mt-4 text-lg text-ef-muted">{hero.sub}</p>
+      <section className="relative overflow-hidden px-5 pt-10 pb-8 text-center md:px-7 sm:pt-14">
+        <div className="ef-orb absolute right-[10%] -top-12 h-[220px] w-[220px]" />
+        <div className="relative z-[1] mx-auto max-w-[1180px]">
+          <p className="ef-eyebrow mb-4 justify-center">
+            <i className="dot" />
+            Delivery OS
+          </p>
+          <h1 className="ef-display mx-auto max-w-[16ch]">{hero.h1}</h1>
+          <p className="ef-sec-lede mx-auto mt-4">{hero.sub}</p>
         </div>
-      </Section>
+      </section>
 
       <Section alt>
-        <ol className="mx-auto max-w-3xl space-y-4">
+        <ol className="mx-auto grid max-w-[900px] gap-3.5">
           {steps.map((step) => (
-            <li
-              key={step.n}
-              className="flex gap-4 rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface p-5 shadow-[var(--ef-shadow-sm)]"
-            >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-ef-accent text-sm font-semibold text-ef-on-accent">
-                {step.n}
-              </span>
-              <div>
+            <li key={step.n} className="ef-card flex gap-4 p-5">
+              <span className="ef-icon-well shrink-0 !m-0">{step.n}</span>
+              <div className="min-w-0">
                 <div className="flex flex-wrap items-baseline gap-2">
-                  <h2 className="text-lg font-semibold text-ef-ink">{step.title}</h2>
-                  <span className="text-xs text-ef-muted">{step.duration}</span>
+                  <h2 className="m-0 text-lg font-semibold text-ef-ink">{step.title}</h2>
+                  <span className="text-xs font-medium text-ef-muted">{step.duration}</span>
                 </div>
-                <p className="mt-1 text-sm text-ef-muted">{step.body}</p>
+                <p className="mt-1.5 text-sm text-ef-muted">{step.body}</p>
               </div>
             </li>
           ))}
@@ -45,11 +43,9 @@ export default function ProcessPage() {
       </Section>
 
       <Section>
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
-            {raci.h2}
-          </h2>
-          <p className="mt-3 text-ef-muted">{raci.body}</p>
+        <div className="ef-panel mx-auto max-w-[760px] p-7 text-center">
+          <h2 className="ef-sec-title">{raci.h2}</h2>
+          <p className="ef-sec-lede mx-auto mt-3">{raci.body}</p>
         </div>
       </Section>
 

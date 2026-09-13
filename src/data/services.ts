@@ -1,25 +1,25 @@
 /** Services page section draft — Indian RE voice */
 export const servicesCopy = {
   meta: {
-    title: "Services | Eternalflow — Websites for Real Estate",
+    title: "Services | EternalFlow — Websites for Real Estate",
     description:
-      "Website design, CRM, WhatsApp chat, local SEO, and ads for real estate projects and agents in India.",
+      "Website, CRM, chat, SEO, and ads for real estate builders and agents — scoped as clear one-off packages.",
   },
   hero: {
     h1: "Your real estate marketing team, productized.",
-    sub: "Website, CRM, chat, SEO, and ads — scoped as clear packages so developers and agents know what ships.",
+    sub: "Website, CRM, chat, SEO, and ads — scoped so builders and agents know what ships.",
   },
   sections: [
     {
       id: "website",
       h2: "Website design & development",
-      body: "Custom, mobile-first sites for project launches and agent brands. Hosting, SSL, daily backups, and unlimited updates listed in your package. Starter, Growth, and Pro are one-off project fees — not a membership. After launch, optional monthly maintenance keeps copy, launches, and inventory current. Amount TBD — separate from the one-off package fee.",
+      body: "Custom, mobile-first sites for project launches and agent brands. Hosting, SSL, daily backups, and unlimited updates listed in your package. Starter, Growth, and Pro are one-off project fees. After launch, optional monthly maintenance keeps copy, launches, and inventory current. Amount TBD — separate from the one-off package fee.",
       includedIn: ["Starter", "Growth", "Pro"],
     },
     {
       id: "copy",
       h2: "Copywriting & pages",
-      body: "We write conversion copy for listings, projects, towers, amenities, and personal agent brands — Indian RE language, not generic agency filler.",
+      body: "We write conversion copy for projects, towers, amenities, and agent brands — Indian RE language, not agency filler.",
       includedIn: ["Starter", "Growth", "Pro"],
     },
     {

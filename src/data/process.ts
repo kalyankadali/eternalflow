@@ -1,9 +1,9 @@
 /** Process page — delivery OS from HANDOFF §5.7 */
 export const processCopy = {
   meta: {
-    title: "Process | Eternalflow",
+    title: "Process | EternalFlow",
     description:
-      "How Eternalflow delivers: discovery, design, build, and launch in four weeks — then optional monthly maintenance.",
+      "How EternalFlow delivers: discovery, design, build, and launch in four weeks — then optional monthly maintenance.",
   },
   hero: {
     h1: "Four weeks to launch. Then we keep shipping updates.",

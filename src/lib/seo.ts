@@ -52,56 +52,56 @@ export function localBusinessJsonLd() {
 
 export const pageMeta = {
   home: {
-    title: "Websites for Real Estate | Eternalflow — Hyderabad",
+    title: "Better Websites for Real Estate Builders & Agents | EternalFlow",
     description:
-      "Productized websites, CRM & ads for real estate projects and agents in India. Clear one-off packages on eternalflow.co. Book a free website review.",
+      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free website review.",
   },
   pricing: {
-    title: "Pricing | Eternalflow — Websites for Real Estate",
+    title: "Pricing | EternalFlow — Websites for Real Estate",
     description:
-      "Transparent one-off Starter, Growth, and Pro packages for real estate websites, CRM, and ads on eternalflow.co. See what's included. Book a free review.",
+      "One-off Starter, Growth, and Pro packages for real estate builders and agents on eternalflow.co. See what's included. Book a free review.",
   },
   getStarted: {
-    title: "Book a Free Website Review | Eternalflow",
+    title: "Book a Free Website Review | EternalFlow",
     description:
-      "Free website review for real estate projects and agents on eternalflow.co. Tell us what's live today — we'll show what's costing you enquiries. WhatsApp or form.",
+      "Free website review for real estate builders and agents on eternalflow.co. We'll show what's costing you enquiries — on WhatsApp.",
   },
   services: {
-    title: "Services | Eternalflow — Websites for Real Estate",
+    title: "Services | EternalFlow — Websites for Real Estate",
     description:
-      "Website design, CRM, WhatsApp chat, local SEO, and ads for real estate projects and agents in India.",
+      "Website, CRM, chat, SEO, and ads for real estate builders and agents — scoped as clear one-off packages.",
   },
   realEstate: {
-    title: "Real Estate Solutions | Eternalflow",
+    title: "Real Estate Solutions | EternalFlow",
     description:
       "Project launch websites, site-visit lead capture, and CRM follow-up for developers and brokerages in India.",
   },
   forAgents: {
-    title: "For Agents | Eternalflow",
+    title: "For Agents | EternalFlow",
     description:
       "Personal brand websites for Hyderabad and India real estate agents — WhatsApp CTAs, listing highlights, lead follow-up.",
   },
   work: {
-    title: "Work & Samples | Eternalflow",
+    title: "Work & Samples | EternalFlow",
     description:
       "Sample real estate project and agent websites for cold outreach — Lakeview Residences and Ananya Rao demos.",
   },
   process: {
-    title: "Process | Eternalflow",
+    title: "Process | EternalFlow",
     description:
-      "How Eternalflow delivers: discovery, design, build, and launch in four weeks — then optional monthly maintenance.",
+      "How EternalFlow delivers: discovery, design, build, and launch in four weeks — then optional monthly maintenance.",
   },
   about: {
-    title: "About | Eternalflow",
+    title: "About | EternalFlow",
     description:
       "Hyderabad-based agency building productized websites, CRM, and ads exclusively for real estate.",
   },
   privacy: {
-    title: "Privacy Policy | Eternalflow",
-    description: "How Eternalflow handles personal data from website enquiries.",
+    title: "Privacy Policy | EternalFlow",
+    description: "How EternalFlow handles personal data from website enquiries.",
   },
   terms: {
-    title: "Terms of Service | Eternalflow",
-    description: "Terms for using the Eternalflow website and booking a review.",
+    title: "Terms of Service | EternalFlow",
+    description: "Terms for using the EternalFlow website and booking a review.",
   },
 } as const;

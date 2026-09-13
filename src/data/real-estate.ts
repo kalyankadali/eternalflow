@@ -1,6 +1,6 @@
 export const realEstateCopy = {
   meta: {
-    title: "Real Estate Solutions | Eternalflow",
+    title: "Real Estate Solutions | EternalFlow",
     description:
       "Project launch websites, site-visit lead capture, and CRM follow-up for developers and brokerages in India.",
   },

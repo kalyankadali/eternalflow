@@ -1,27 +1,28 @@
-/** Week 1 Home copy — from copy/week1-home-pricing-get-started.md */
+/** Week 1 Home copy — R1 hero lock + scrub pack */
 export const homeCopy = {
   meta: {
-    title: "Websites for Real Estate | Eternalflow — Hyderabad",
+    title: "Better Websites for Real Estate Builders & Agents | EternalFlow",
     description:
-      "Productized websites, CRM & ads for real estate projects and agents in India. Clear one-off packages on eternalflow.co. Book a free website review.",
+      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free website review.",
   },
   hero: {
-    h1: "Eternal Flow Builds Better Websites, Every Time.",
-    sub: "Productized websites, CRM & ads for real estate businesses and agents in India.",
-    body: "Built in Hyderabad for project launches, agent brands, and enquiry follow-up that doesn't die in WhatsApp.",
+    brand: "EternalFlow",
+    h1: "Better Websites For Real Estate Builders & Agents",
+    sub: "Productized websites, CRM & ads for real estate builders and agents in India.",
+    body: "Hyderabad-based. Project launches, agent brands, and WhatsApp enquiries that don't die in a chat thread.",
     primaryCta: { label: "Book a free website review", href: "/get-started" },
     secondaryCta: { label: "See sample sites", href: "/work" },
   },
   trust: [
     "Built for real estate",
     "Hyderabad",
-    "Productized pricing",
-    "WhatsApp-first support",
+    "One-off packages",
+    "WhatsApp-first",
   ],
   problem: {
     h2: "What's costing you enquiries right now",
     intro:
-      "Most real estate sites look fine in a browser and fail when a buyer asks for a site visit.",
+      "Most real estate sites look fine until a buyer asks for a site visit.",
     cards: [
       {
         h3: "Project pages that don't convert",
@@ -41,9 +42,9 @@ export const homeCopy = {
     ],
   },
   offer: {
-    h2: "One modern marketing stack for real estate",
+    h2: "One stack for builders and agents",
     intro:
-      "Website + CRM + online ads — productized so you know what's included before you start.",
+      "Website + CRM + online ads — productized so you know what ships before you start.",
     cards: [
       {
         h3: "Website",
@@ -64,16 +65,16 @@ export const homeCopy = {
   packages: {
     h2: "Clear packages. Pick a lane.",
     intro:
-      "Starter, Growth, or Pro — one-off project fees. Deliverables and INR listed up front — no proposal theatre.",
+      "Starter, Growth, or Pro — one-off project fees for builders and agents. Deliverables and INR up front.",
     cta: { label: "See full pricing", href: "/pricing" },
   },
   niche: {
-    h2: "Two paths. Same delivery OS.",
+    h2: "Two paths. Same delivery.",
     panels: [
       {
-        h3: "Project launch websites that book site visits",
-        audience: "Developers & projects",
-        body: "Inventory, towers, amenities, and enquiry forms built for Indian buyers and channel partners.",
+        h3: "Project sites that book site visits",
+        audience: "Builders & projects",
+        body: "Inventory, towers, amenities, and enquiry forms for Indian buyers and channel partners.",
         cta: { label: "Real estate solutions", href: "/real-estate" },
       },
       {
@@ -93,7 +94,7 @@ export const homeCopy = {
   process: {
     h2: "Live in four weeks.",
     steps: ["Discovery", "Design", "Build", "Launch", "Optional monthly maintenance"],
-    body: "Discovery → design → build → launch. Starter, Growth, and Pro are one-off project fees. After go-live, optional monthly maintenance keeps launches and inventory current — amount TBD, separate from the package.",
+    body: "Discovery → design → build → launch. Packages are one-off project fees. After go-live, optional monthly maintenance keeps launches and inventory current — amount TBD, separate from the package.",
   },
   /** Hide until real quotes — do not invent social proof */
   testimonials: {
@@ -103,7 +104,7 @@ export const homeCopy = {
   },
   finalCta: {
     h2: "Book a free website review",
-    body: "No sales pitch. We'll tell you what's costing you enquiries — and the clear next step.",
+    body: "No sales pitch. We'll show what's costing you enquiries — and the clear next step on WhatsApp.",
     primaryCta: { label: "Book a free website review", href: "/get-started" },
     secondaryCta: { label: "Chat on WhatsApp", href: "whatsapp" },
   },

@@ -11,6 +11,16 @@ import { pageMeta } from "@/lib/seo";
 export const metadata = {
   title: { absolute: pageMeta.home.title },
   description: pageMeta.home.description,
+  openGraph: {
+    title: pageMeta.home.title,
+    description: pageMeta.home.description,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageMeta.home.title,
+    description: pageMeta.home.description,
+  },
 };
 
 const offerMarks = ["W", "C", "A"] as const;
@@ -31,9 +41,12 @@ export default function HomePage() {
           <div>
             <p className="ef-eyebrow mb-4">
               <i className="dot" />
-              Real estate websites · Hyderabad
+              {hero.brand}
             </p>
-            <h1 className="ef-display mb-4">{hero.h1}</h1>
+            <p className="mb-2.5 text-[13px] font-semibold uppercase tracking-[0.04em] text-ef-muted">
+              Hyderabad · Real estate specialists
+            </p>
+            <h1 className="ef-display mb-4 max-w-[18ch] sm:max-w-[20ch]">{hero.h1}</h1>
             <p className="mb-3 max-w-[42ch] text-[1.12rem] text-ef-muted">{hero.sub}</p>
             <p className="mb-7 max-w-[46ch] text-base text-ef-muted">{hero.body}</p>
             <div className="mb-5 flex flex-wrap gap-3">
@@ -45,7 +58,7 @@ export default function HomePage() {
               </ButtonLink>
             </div>
             <div className="flex flex-wrap gap-x-[18px] gap-y-2.5 text-[13px] font-medium text-ef-muted">
-              {trust.slice(0, 3).map((item) => (
+              {trust.map((item) => (
                 <span key={item} className="inline-flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-ef-accent" />
                   {item}

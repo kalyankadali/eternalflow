@@ -675,3 +675,14 @@ th.ef-col-g {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Footer soft wash */
+.ef-footer {
+  position: relative;
+  background-image: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    var(--ef-accent-muted),
+    transparent 55%
+  );
+}

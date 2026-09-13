@@ -13,7 +13,7 @@ export async function notifyLeadEmail(payload: LeadPayload): Promise<void> {
   // Provider hook (Resend/Postmark) — stub until keys exist
   console.info("[lead:email:stub]", {
     to,
-    subject: `Eternalflow lead — ${payload.name} (${payload.package})`,
+    subject: `EternalFlow lead — ${payload.name} (${payload.package})`,
     payload,
   });
 }

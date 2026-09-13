@@ -34,12 +34,12 @@ const columns = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto border-t border-ef-border bg-ef-surface-2">
+    <footer className="ef-footer mt-auto border-t border-ef-border bg-ef-surface-2">
       <Container className="grid gap-7 py-12 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
         <div className="space-y-3 text-[15px] leading-relaxed text-ef-muted">
           <Logo />
           <p>
-            Productized websites, CRM &amp; ads for real estate in India.
+            Productized websites, CRM &amp; ads for real estate builders and agents in India.
           </p>
           <p>
             Based in {siteConfig.location.city}, {siteConfig.location.region}

@@ -1,6 +1,6 @@
 export const forAgentsCopy = {
   meta: {
-    title: "For Agents | Eternalflow",
+    title: "For Agents | EternalFlow",
     description:
       "Personal brand websites for Hyderabad and India real estate agents — WhatsApp CTAs, listing highlights, lead follow-up.",
   },

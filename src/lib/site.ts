@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Eternalflow",
-  legalName: "Eternalflow",
-  tagline: "Eternal Flow Builds Better Websites, Every Time.",
+  name: "EternalFlow",
+  legalName: "EternalFlow",
+  tagline: "Better Websites For Real Estate Builders & Agents",
   description:
-    "Productized websites, CRM & ads for real estate businesses and agents in India. Based in Hyderabad.",
+    "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free website review.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://eternalflow.co",
   locale: "en_IN",
   location: {
@@ -15,10 +15,10 @@ export const siteConfig = {
   email: "hello@eternalflow.co",
   defaultWhatsAppMessage:
     "Hi Eternalflow — I'd like a free website review.",
-  titleTemplate: "%s | Eternalflow — Websites for Real Estate",
-  defaultTitle: "Eternalflow — Websites for Real Estate",
+  titleTemplate: "%s | EternalFlow",
+  defaultTitle: "Better Websites for Real Estate Builders & Agents | EternalFlow",
 } as const;
 
 export function pageTitle(page: string) {
-  return `${page} | Eternalflow — Websites for Real Estate`;
+  return `${page} | EternalFlow`;
 }

@@ -159,11 +159,11 @@ export const pricingFaqs = [
   },
   {
     q: "Are Starter, Growth, and Pro monthly subscriptions?",
-    a: "No. They are one-off project fees. You pay for the build and what's listed in the package — not a membership.",
+    a: "No. They are one-off project fees. You pay for the build and what's listed in the package — no monthly package subscription.",
   },
   {
     q: 'What does "unlimited updates" mean?',
-    a: "Unlimited updates in the package = what's in that project scope (and Growth's routine launch/announcement updates). Ongoing monthly care is optional maintenance, billed separately. Package fees stay one-off.",
+    a: "Updates listed in your package (and Growth's routine launch/announcement updates) are part of that project scope. For ongoing care after launch — copy tweaks, new inventory notes, fresh announcements on a monthly rhythm — we offer optional monthly maintenance as a separate add-on. Amount TBD; we won't invent a rupee figure until it's locked.",
   },
   {
     q: "Can I skip maintenance or take the site elsewhere?",
@@ -171,6 +171,6 @@ export const pricingFaqs = [
   },
   {
     q: "Do you only work with real estate?",
-    a: "Yes. Projects, developers, brokerages, and agents. Focus keeps the copy, funnels, and CRM patterns sharp.",
+    a: "Yes. Builders, projects, brokerages, and agents. Focus keeps the copy, funnels, and CRM patterns sharp.",
   },
 ];

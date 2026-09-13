@@ -13,50 +13,48 @@ export default function AboutPage() {
 
   return (
     <>
-      <Section className="pt-10">
-        <div className="mx-auto max-w-2xl">
-          <h1 className="text-3xl font-semibold tracking-tight text-ef-ink sm:text-4xl">
-            {hero.h1}
-          </h1>
-          <p className="mt-4 text-lg text-ef-muted">{hero.sub}</p>
+      <section className="relative overflow-hidden px-5 pt-10 pb-8 text-center md:px-7 sm:pt-14">
+        <div className="ef-orb absolute -top-14 left-[15%] h-[240px] w-[240px]" />
+        <div className="relative z-[1] mx-auto max-w-[1180px]">
+          <p className="ef-eyebrow mb-4 justify-center">
+            <i className="dot" />
+            About
+          </p>
+          <h1 className="ef-display mx-auto max-w-[16ch]">{hero.h1}</h1>
+          <p className="ef-sec-lede mx-auto mt-4">{hero.sub}</p>
         </div>
-      </Section>
+      </section>
 
       <Section alt>
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">{why.h2}</h2>
-          <p className="mt-3 text-ef-muted">{why.body}</p>
+        <div className="grid gap-3.5 md:grid-cols-2">
+          <article className="ef-card ef-bar-left p-6">
+            <h2 className="ef-sec-title text-[1.35rem]">{why.h2}</h2>
+            <p className="mt-3 text-sm text-ef-muted">{why.body}</p>
+          </article>
+          <article className="ef-card ef-bar-left p-6">
+            <h2 className="ef-sec-title text-[1.35rem]">{model.h2}</h2>
+            <p className="mt-3 text-sm text-ef-muted">{model.body}</p>
+          </article>
         </div>
       </Section>
 
       <Section>
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">{model.h2}</h2>
-          <p className="mt-3 text-ef-muted">{model.body}</p>
-        </div>
-      </Section>
-
-      <Section alt>
-        <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">Values</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <h2 className="ef-sec-title text-center">Values</h2>
+        <div className="mt-8 grid gap-3.5 md:grid-cols-3">
           {values.map((value) => (
-            <article
-              key={value.title}
-              className="rounded-[var(--ef-radius-card)] border border-ef-border bg-ef-surface p-6 shadow-[var(--ef-shadow-md)]"
-            >
-              <h3 className="text-lg font-semibold text-ef-ink">{value.title}</h3>
+            <article key={value.title} className="ef-card p-6">
+              <div className="ef-icon-well">{value.title.slice(0, 1)}</div>
+              <h3 className="mt-3 text-lg font-semibold text-ef-ink">{value.title}</h3>
               <p className="mt-2 text-sm text-ef-muted">{value.body}</p>
             </article>
           ))}
         </div>
       </Section>
 
-      <Section>
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-2xl font-semibold tracking-tight text-ef-ink">
-            {location.h2}
-          </h2>
-          <p className="mt-3 text-ef-muted">{location.body}</p>
+      <Section alt>
+        <div className="ef-panel mx-auto max-w-[760px] p-7 text-center">
+          <h2 className="ef-sec-title">{location.h2}</h2>
+          <p className="ef-sec-lede mx-auto mt-3">{location.body}</p>
         </div>
       </Section>
 

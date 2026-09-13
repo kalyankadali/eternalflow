@@ -1,13 +1,13 @@
 /** About page draft */
 export const aboutCopy = {
   meta: {
-    title: "About | Eternalflow",
+    title: "About | EternalFlow",
     description:
       "Hyderabad-based agency building productized websites, CRM, and ads exclusively for real estate.",
   },
   hero: {
     h1: "Built in Hyderabad. Focused on real estate.",
-    sub: "Eternalflow is a productized web, CRM, and ads team for projects, developers, brokerages, and agents across India.",
+    sub: "EternalFlow is a productized web, CRM, and ads team for projects, developers, brokerages, and agents across India.",
   },
   why: {
     h2: "Why real estate only",
