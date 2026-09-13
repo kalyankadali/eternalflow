@@ -1,0 +1,27 @@
+import { ButtonLink } from "@/components/Button";
+import { Section } from "@/components/Section";
+import { pageTitle } from "@/lib/site";
+
+export const metadata = {
+  title: { absolute: pageTitle("Terms") },
+  description: "By using this site or booking a review, you agree to communicate in good faith and provide accurate contact details.",
+};
+
+export default function Page() {
+  return (
+    <Section className="pt-10">
+      <h1 className="text-3xl font-semibold tracking-tight text-ef-ink sm:text-4xl">
+        Terms
+      </h1>
+      <p className="mt-4 max-w-2xl text-ef-muted">
+        By using this site or booking a review, you agree to communicate in good faith and provide accurate contact details.
+      </p>
+      <p className="mt-3 max-w-2xl text-ef-muted">
+        Package terms, membership, and cancel policy will be published here after founder sign-off. Questions: hello@eternalflow.in.
+      </p>
+      <div className="mt-8">
+        <ButtonLink href="/get-started">Book free review</ButtonLink>
+      </div>
+    </Section>
+  );
+}
