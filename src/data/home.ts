@@ -47,7 +47,7 @@ export const homeCopy = {
     cards: [
       {
         h3: "Website",
-        body: "Custom design and copy for projects or your personal brand. Mobile-first, hosted, SSL, unlimited updates.",
+        body: "Custom design and copy for projects or your personal brand. Mobile-first, hosted, SSL, unlimited updates listed in your package.",
       },
       {
         h3: "CRM",

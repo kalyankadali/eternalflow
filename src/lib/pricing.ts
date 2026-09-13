@@ -132,7 +132,7 @@ export const alwaysIncluded = [
   "Mobile-friendly build",
   "Hosting, security & SSL",
   "Daily backups",
-  "Unlimited updates on optional maintenance",
+  "Unlimited updates listed in your package",
 ];
 
 export const pricingAddOns = [
@@ -159,11 +159,11 @@ export const pricingFaqs = [
   },
   {
     q: "Are Starter, Growth, and Pro monthly subscriptions?",
-    a: "No. They are one-off project fees. You pay for the build and what's listed in the package — not a cancel-anytime membership for those tiers.",
+    a: "No. They are one-off project fees. You pay for the build and what's listed in the package — not a membership.",
   },
   {
     q: 'What does "unlimited updates" mean?',
-    a: "Updates listed in your package (and Growth's routine launch/announcement updates) are part of that project scope. For ongoing care after launch — copy tweaks, new inventory notes, fresh announcements on a monthly rhythm — we offer optional monthly maintenance as a separate add-on. Amount TBD; we won't invent a rupee figure until it's locked.",
+    a: "Unlimited updates in the package = what's in that project scope (and Growth's routine launch/announcement updates). Ongoing monthly care is optional maintenance, billed separately. Package fees stay one-off.",
   },
   {
     q: "Can I skip maintenance or take the site elsewhere?",

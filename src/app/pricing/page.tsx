@@ -141,9 +141,10 @@ export default function PricingPage() {
       <Section>
         <h2 className="ef-sec-title text-center">Always in the box</h2>
         <p className="ef-sec-lede mx-auto mb-6 text-center">
-          Custom design and copywriting, mobile-friendly build, hosting, security,
-          SSL, daily backups, and unlimited updates on membership. You don&apos;t
-          fight for the basics.
+          Unlimited updates listed in your package. Starter, Growth, and Pro are
+          one-off project fees — not a membership. After launch, optional monthly
+          maintenance keeps copy, launches, and inventory current. Amount TBD —
+          separate from the one-off package fee.
         </p>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {alwaysIncluded.map((item, i) => (

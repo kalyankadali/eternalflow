@@ -13,7 +13,7 @@ export const servicesCopy = {
     {
       id: "website",
       h2: "Website design & development",
-      body: "Custom, mobile-first sites for project launches and agent brands. Hosting, SSL, daily backups, and unlimited updates on membership.",
+      body: "Custom, mobile-first sites for project launches and agent brands. Hosting, SSL, daily backups, and unlimited updates listed in your package. Starter, Growth, and Pro are one-off project fees — not a membership. After launch, optional monthly maintenance keeps copy, launches, and inventory current. Amount TBD — separate from the one-off package fee.",
       includedIn: ["Starter", "Growth", "Pro"],
     },
     {

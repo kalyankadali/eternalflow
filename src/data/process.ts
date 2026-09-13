@@ -3,7 +3,7 @@ export const processCopy = {
   meta: {
     title: "Process | Eternalflow",
     description:
-      "How Eternalflow delivers: discovery, design, build, launch, and unlimited updates in four weeks.",
+      "How Eternalflow delivers: discovery, design, build, and launch in four weeks — then optional monthly maintenance.",
   },
   hero: {
     h1: "Four weeks to launch. Then we keep shipping updates.",
@@ -48,9 +48,9 @@ export const processCopy = {
     },
     {
       n: 7,
-      title: "Unlimited updates",
-      duration: "Ongoing membership",
-      body: "Copy tweaks, new project announcements, inventory notes — requested via form or WhatsApp → board.",
+      title: "Optional monthly maintenance",
+      duration: "After launch",
+      body: "After launch, optional monthly maintenance keeps copy, launches, and inventory current. Amount TBD — separate from the one-off package fee. Requested via form or WhatsApp → board.",
     },
   ],
   raci: {

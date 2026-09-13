@@ -89,7 +89,7 @@ export const pageMeta = {
   process: {
     title: "Process | Eternalflow",
     description:
-      "How Eternalflow delivers: discovery, design, build, launch, and unlimited updates in four weeks.",
+      "How Eternalflow delivers: discovery, design, build, and launch in four weeks — then optional monthly maintenance.",
   },
   about: {
     title: "About | Eternalflow",

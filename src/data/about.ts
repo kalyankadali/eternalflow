@@ -24,7 +24,7 @@ export const aboutCopy = {
     },
     {
       title: "Speed",
-      body: "Four-week delivery for the core site — then unlimited updates.",
+      body: "Four-week delivery for the core site. Unlimited updates listed in your package; ongoing care is optional monthly maintenance (amount TBD).",
     },
     {
       title: "Craft",
