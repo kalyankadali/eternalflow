@@ -65,7 +65,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <ButtonLink href="/get-started" size="md" className="hidden sm:inline-flex">
-            Book free review
+            Review with Kalyan
           </ButtonLink>
           <button
             type="button"
@@ -100,7 +100,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <ButtonLink href="/get-started" size="md" className="mt-1">
-              Book free review
+              Review with Kalyan
             </ButtonLink>
           </Container>
         </div>

@@ -1,9 +1,8 @@
-/** Process page — delivery OS from HANDOFF §5.7 */
 export const processCopy = {
   meta: {
     title: "Process | EternalFlow",
     description:
-      "How EternalFlow delivers: discovery, design, build, and launch in four weeks — then optional monthly maintenance.",
+      "How EternalFlow delivers: discovery, design, build, and launch in four weeks — then optional monthly care at ₹4,999/mo.",
   },
   hero: {
     h1: "Four weeks to launch. Then we keep shipping updates.",
@@ -48,9 +47,9 @@ export const processCopy = {
     },
     {
       n: 7,
-      title: "Optional monthly maintenance",
-      duration: "After launch",
-      body: "After launch, optional monthly maintenance keeps copy, launches, and inventory current. Amount TBD — separate from the one-off package fee. Requested via form or WhatsApp → board.",
+      title: "Optional monthly care",
+      duration: "₹4,999/mo",
+      body: "After launch, optional monthly care at ₹4,999/mo keeps copy, launches, and inventory current — separate from the one-off package fee. Requested via form or WhatsApp → board.",
     },
   ],
   raci: {
@@ -58,7 +57,7 @@ export const processCopy = {
     body: "One delivery lead owns your board and weekly check-in. Design and engineering sit behind that seat so you aren't juggling five chats.",
   },
   cta: {
-    label: "Book a free website review",
+    label: "Book a free review with Kalyan",
     href: "/get-started",
   },
 } as const;

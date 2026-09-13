@@ -11,7 +11,7 @@ const columns = [
       { href: "/services", label: "Services" },
       { href: "/pricing", label: "Pricing" },
       { href: "/process", label: "Process" },
-      { href: "/get-started", label: "Book free review" },
+      { href: "/get-started", label: "Book a free review with Kalyan" },
     ],
   },
   {
@@ -51,6 +51,7 @@ export function SiteFooter() {
             {siteConfig.email}
           </a>
           <WhatsAppLink className="inline-flex text-sm font-medium text-ef-muted no-underline hover:text-ef-accent" />
+          <p className="text-xs text-ef-muted">Talk to Kalyan — WhatsApp first.</p>
         </div>
         {columns.map((col) => (
           <div key={col.title}>

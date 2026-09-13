@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
+import { StickyMobileBar } from "@/components/StickyMobileBar";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -30,6 +31,9 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.defaultTitle,
     description: siteConfig.description,
+  },
+  other: {
+    "theme-color": "#fff7ed",
   },
   twitter: {
     card: "summary_large_image",
@@ -57,11 +61,12 @@ export default function RootLayout({
           </a>
           <LocalBusinessJsonLd />
           <SiteHeader />
-          <main id="main" className="flex-1">
+          <main id="main" className="flex-1 pb-24 md:pb-0">
             {children}
           </main>
           <SiteFooter />
           <WhatsAppFab />
+          <StickyMobileBar />
         </ThemeProvider>
       </body>
     </html>

@@ -3,28 +3,21 @@ export type TierId = "starter" | "growth" | "pro";
 export type PricingTier = {
   id: TierId;
   name: string;
-  /** Short card tagline (Week 1 copy) */
   blurb: string;
-  /** R1-locked public INR display */
   priceLabel: string;
-  /** Optional cadence note under the price (e.g. one-time project) */
   priceNote?: string;
   popular?: boolean;
-  /** Chip label when popular — default "Most popular" */
   popularLabel?: string;
   ctaLabel: string;
-  /** Verbatim deliverables — keep as string[] for FE cards */
   features: string[];
-  /**
-   * Optional badge keyed by exact feature string.
-   * R1 locked: AI Voice shows "rolling out".
-   */
   featureBadges?: Record<string, string>;
   includesPrevious?: string;
 };
 
 const AI_VOICE =
   "AI Voice Assistant (answers inbound prospect calls, captures contact details, books appointments)";
+
+const BOOK = "Book a free review with Kalyan";
 
 /** Canonical package copy — HANDOFF §5.3 + Week 1 copy. R1-locked INR in priceLabel. */
 export const pricingTiers: PricingTier[] = [
@@ -34,7 +27,7 @@ export const pricingTiers: PricingTier[] = [
     blurb: "A sharp 5-page site, shipped in four weeks.",
     priceLabel: "₹24,999",
     priceNote: "one-off project",
-    ctaLabel: "Book a free website review",
+    ctaLabel: BOOK,
     features: [
       "5-page custom website",
       "Mobile-friendly design",
@@ -53,7 +46,7 @@ export const pricingTiers: PricingTier[] = [
     priceNote: "one-off project",
     popular: true,
     popularLabel: "Most popular",
-    ctaLabel: "Book a free website review",
+    ctaLabel: BOOK,
     includesPrevious: "Everything in Starter, plus",
     features: [
       "CRM integration and setup",
@@ -70,7 +63,7 @@ export const pricingTiers: PricingTier[] = [
     blurb: "Automations and AI on top of the Growth stack.",
     priceLabel: "₹59,999",
     priceNote: "one-off project",
-    ctaLabel: "Book a free website review",
+    ctaLabel: BOOK,
     includesPrevious: "Everything in Growth, plus",
     features: [
       "Custom automated workflows and CRM updates built for your pipeline",
@@ -88,7 +81,6 @@ export type ComparisonRow = {
   starter: boolean | string;
   growth: boolean | string;
   pro: boolean | string;
-  /** Optional badge for the feature label (e.g. AI Voice) */
   badge?: string;
 };
 
@@ -137,13 +129,14 @@ export const alwaysIncluded = [
 
 export const pricingAddOns = [
   { name: "Photo / video production", status: "Custom" },
-  { name: "Ads management", status: "Coming / custom" },
+  { name: "Ads management", status: "Coming" },
+  { name: "Optional monthly care", status: "₹4,999/mo" },
 ];
 
 export const pricingFaqs = [
   {
     q: "What do the packages cost?",
-    a: "Starter is ₹24,999. Growth is ₹39,999. Pro is ₹59,999. What's included is listed on each card — book a free review if you're unsure which fits.",
+    a: "Starter is ₹24,999. Growth is ₹39,999. Pro is ₹59,999. What's included is listed on each card — book a free review with Kalyan if you're unsure which fits.",
   },
   {
     q: "What's the difference between Starter and Growth?",
@@ -159,18 +152,46 @@ export const pricingFaqs = [
   },
   {
     q: "Are Starter, Growth, and Pro monthly subscriptions?",
-    a: "No. They are one-off project fees. You pay for the build and what's listed in the package — no monthly package subscription.",
+    a: "No. They are one-off project fees. Optional monthly care at ₹4,999/mo is separate if you want ongoing updates after launch.",
+  },
+  {
+    q: "What does optional monthly care cost?",
+    a: "₹4,999 per month. It's optional and separate from Starter, Growth, and Pro — covers ongoing copy, launches, and inventory updates after your one-off build.",
   },
   {
     q: 'What does "unlimited updates" mean?',
-    a: "Updates listed in your package (and Growth's routine launch/announcement updates) are part of that project scope. For ongoing care after launch — copy tweaks, new inventory notes, fresh announcements on a monthly rhythm — we offer optional monthly maintenance as a separate add-on. Amount TBD; we won't invent a rupee figure until it's locked.",
+    a: "Updates listed in your package (and Growth's routine launch/announcement updates) are part of that project scope. For ongoing care after launch — copy tweaks, new inventory notes, fresh announcements on a monthly rhythm — optional monthly care is ₹4,999/mo as a separate add-on.",
+  },
+  {
+    q: "Who owns the site after I pay?",
+    a: "You own the deliverables from your one-off package. Optional monthly care (₹4,999/mo) is separate and does not hold your site hostage. Portability details (repos, domains, handoff) are confirmed in writing before you pay.",
   },
   {
     q: "Can I skip maintenance or take the site elsewhere?",
-    a: "Yes on maintenance — it's optional and separate from the one-off package fee. Site ownership and portability terms are being finalized with legal; we'll state them clearly before you pay.",
+    a: "Yes — optional monthly care is separate from the one-off package fee. You own the deliverables; portability details are confirmed in writing before you pay.",
   },
   {
     q: "Do you only work with real estate?",
     a: "Yes. Builders, projects, brokerages, and agents. Focus keeps the copy, funnels, and CRM patterns sharp.",
   },
 ];
+
+/** Example testimonials — honest chip until real quotes lock */
+export const exampleTestimonials = [
+  {
+    quote:
+      "We needed a project site that could book site visits — not another brochure PDF.",
+    name: "Priya M.",
+    role: "Project marketing lead",
+    company: "Hyderabad developer",
+    initials: "PM",
+  },
+  {
+    quote:
+      "Buyers kept asking if I had my own site. Now I send one link in every DM.",
+    name: "Rahul S.",
+    role: "Independent agent",
+    company: "Hyderabad",
+    initials: "RS",
+  },
+] as const;

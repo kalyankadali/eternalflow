@@ -1,26 +1,41 @@
-/** Get Started copy — R1 lock §7. Form UI owned by R6 ContactForm; page shell by R5. */
+/** Get Started — Section C review promise */
 export const getStartedCopy = {
   meta: {
-    title: "Book a Free Website Review | EternalFlow",
+    title: "Free Website Review with Kalyan | EternalFlow",
     description:
-      "Free website review for real estate builders and agents on eternalflow.co. We'll show what's costing you enquiries — on WhatsApp.",
+      "Free website review for real estate builders and agents on eternalflow.co. Gaps → package fit → next step — on WhatsApp with Kalyan.",
   },
   promise: {
-    h1: "Free website review",
+    h1: "Free website review with Kalyan",
     sub: "We'll tell you what's costing you enquiries.",
-    body: "Share your current site (or say you don't have one). We'll reply on WhatsApp with clear gaps — project pages, agent brand, enquiry capture, CRM follow-up — and which package fits. No sales pitch. Clear next steps.",
+    body: "Share your current site (or say you don't have one). On the review you get:",
+    bullets: [
+      {
+        title: "Gaps",
+        body: "Project pages, agent brand, WhatsApp capture, CRM follow-up",
+      },
+      {
+        title: "Package fit",
+        body: "Starter ₹24,999 / Growth ₹39,999 / Pro ₹59,999 (one-off)",
+      },
+      {
+        title: "Next step",
+        body: "How we start, in plain language",
+      },
+    ],
+    closer: "No sales pitch. Reply on WhatsApp within one business day.",
   },
   whatsappPanel: {
     h2: "Prefer WhatsApp?",
     body: "Same free review. Tap through with a prefilled message.",
-    cta: "Chat on WhatsApp",
+    cta: "WhatsApp Kalyan",
   },
   next: {
     h2: "What happens next",
     steps: [
       {
         title: "You send details",
-        body: "Form or WhatsApp.",
+        body: "Form or WhatsApp Kalyan.",
       },
       {
         title: "We review",

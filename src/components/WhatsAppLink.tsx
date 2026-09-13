@@ -1,4 +1,5 @@
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { siteConfig } from "@/lib/site";
 
 type Props = {
   className?: string;
@@ -17,7 +18,7 @@ export function WhatsAppLink({ className, children }: Props) {
       rel="noopener noreferrer"
       className={className}
     >
-      {children ?? "Chat on WhatsApp"}
+      {children ?? siteConfig.cta.whatsapp}
     </a>
   );
 }

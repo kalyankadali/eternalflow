@@ -166,7 +166,7 @@ export function ContactForm() {
       </label>
 
       <p className="text-xs text-ef-muted">
-        Fields marked required. We reply on WhatsApp within one business day.
+        Fields marked required. Kalyan replies on WhatsApp within one business day.
       </p>
 
       <Button type="submit" size="lg" disabled={status === "pending"} className="w-full">
@@ -175,7 +175,7 @@ export function ContactForm() {
 
       {status === "success" ? (
         <p className="text-sm font-medium text-ef-accent-strong" role="status">
-          Got it — we&apos;ll reply on WhatsApp within one business day.
+          Got it — Kalyan will reply on WhatsApp within one business day.
         </p>
       ) : null}
       {status === "error" ? (

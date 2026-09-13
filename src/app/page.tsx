@@ -86,14 +86,16 @@ export default function HomePage() {
         <div className="ef-bento">
           {problem.cards.map((card, i) => (
             <article
-              key={card.h3}
+              key={card.label}
               className={`ef-card ef-bar-left p-6 ${i === 0 ? "span-row" : ""}`}
             >
               <div className="ef-icon-well">{String(i + 1).padStart(2, "0")}</div>
-              <p className="text-xs font-medium uppercase tracking-wide text-ef-accent">
-                {card.title}
+              <p className="mt-3.5 text-[1.05rem] font-medium leading-snug text-ef-ink">
+                &ldquo;{card.quote}&rdquo;
               </p>
-              <h3 className="mt-2 text-lg font-semibold text-ef-ink">{card.h3}</h3>
+              <h3 className="mt-3 text-[0.95rem] font-semibold text-ef-accent-strong">
+                {card.label}
+              </h3>
               <p className="mt-2 text-sm text-ef-muted">{card.body}</p>
             </article>
           ))}

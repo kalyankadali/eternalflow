@@ -1,19 +1,19 @@
-/** Services page section draft — Indian RE voice */
+/** Services — hide Ads block; maintenance ₹4,999/mo */
 export const servicesCopy = {
   meta: {
     title: "Services | EternalFlow — Websites for Real Estate",
     description:
-      "Website, CRM, chat, SEO, and ads for real estate builders and agents — scoped as clear one-off packages.",
+      "Website, CRM, chat, and SEO for real estate builders and agents — scoped as clear one-off packages.",
   },
   hero: {
     h1: "Your real estate marketing team, productized.",
-    sub: "Website, CRM, chat, SEO, and ads — scoped so builders and agents know what ships.",
+    sub: "Website, CRM, chat, and SEO — scoped so builders and agents know what ships.",
   },
   sections: [
     {
       id: "website",
       h2: "Website design & development",
-      body: "Custom, mobile-first sites for project launches and agent brands. Hosting, SSL, daily backups, and unlimited updates listed in your package. Starter, Growth, and Pro are one-off project fees. After launch, optional monthly maintenance keeps copy, launches, and inventory current. Amount TBD — separate from the one-off package fee.",
+      body: "Custom, mobile-first sites for project launches and agent brands. Hosting, SSL, daily backups, and unlimited updates listed in your package. Starter, Growth, and Pro are one-off project fees. After launch, optional monthly care at ₹4,999/mo keeps copy, launches, and inventory current — separate from the one-off package fee.",
       includedIn: ["Starter", "Growth", "Pro"],
     },
     {
@@ -51,12 +51,6 @@ export const servicesCopy = {
       badge: "Growth+",
     },
     {
-      id: "ads",
-      h2: "Online ads (overview)",
-      body: "Traffic that lands on a site built to book site visits. Deep ads management available as custom / coming add-on.",
-      includedIn: ["Custom"],
-    },
-    {
       id: "automations",
       h2: "Automations + AI",
       body: "Custom CRM workflows, an AI chatbot trained on your business, and AI voice for inbound prospect calls.",
@@ -68,6 +62,8 @@ export const servicesCopy = {
       ],
     },
   ],
+  adsNote:
+    "Paid ads management — coming as a scoped add-on. Not included in Starter, Growth, or Pro.",
   cta: {
     h2: "See what's in each package",
     href: "/pricing",

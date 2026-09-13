@@ -32,9 +32,9 @@ export const workDemos: WorkDemo[] = [
       "Amenities & location story",
       "Site-visit enquiry form + WhatsApp",
     ],
-    resultPlaceholder: "Demo — metric placeholders for outreach screenshots",
+    resultPlaceholder: "Example for screenshots: \"Book a site visit\" as primary CTA — not a reported client result.",
     isDemo: true,
-    demoLabel: "Demo sample (not a live client)",
+    demoLabel: "Demo sample — not a live client",
     challenge:
       "Typical project microsites bury inventory in PDFs. Buyers and channel partners need clear towers, pricing bands, and a one-tap path to book a site visit.",
     solution:
@@ -63,9 +63,9 @@ export const workDemos: WorkDemo[] = [
       "Featured projects / listings highlights",
       "WhatsApp + review CTA",
     ],
-    resultPlaceholder: "Demo — use in agent DM cold outreach",
+    resultPlaceholder: "Example for outreach: personal brand 5-pager + WhatsApp CTA — not a reported client result. Demo — use in agent DM cold outreach.",
     isDemo: true,
-    demoLabel: "Demo sample (not a live client)",
+    demoLabel: "Demo sample — not a live client",
     challenge:
       "Agents often rely on portal ads and Instagram alone. Prospects search a name and find nothing trustworthy — or a stale single-page site.",
     solution:

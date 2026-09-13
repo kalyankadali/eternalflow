@@ -10,10 +10,8 @@ export const metadata = {
   description: pageMeta.forAgents.description,
 };
 
-const marks = ["01", "02", "03", "04"] as const;
-
 export default function ForAgentsPage() {
-  const { hero, sections, sampleCta, outreachNote, cta } = forAgentsCopy;
+  const { hero, blueprint, packageFit, faqs, dm, sampleCta, cta } = forAgentsCopy;
 
   return (
     <>
@@ -59,7 +57,7 @@ export default function ForAgentsPage() {
                   WhatsApp enquiries · <strong>captured</strong>
                 </div>
                 <div className="mt-2.5 rounded-full bg-ef-accent py-2 text-center text-[11px] font-bold text-ef-on-accent">
-                  Chat on WhatsApp
+                  WhatsApp Kalyan
                 </div>
               </div>
             </MockPhone>
@@ -67,17 +65,55 @@ export default function ForAgentsPage() {
         </div>
       </section>
 
-      <Section alt>
-        <div className="grid gap-3.5 sm:grid-cols-2">
-          {sections.map((section, i) => (
-            <article key={section.h2} className="ef-card ef-bar-left p-6">
-              <div className="ef-icon-well">{marks[i] ?? "•"}</div>
-              <h2 className="text-lg font-semibold text-ef-ink">{section.h2}</h2>
-              <p className="mt-2 text-sm text-ef-muted">{section.body}</p>
+      <Section>
+        <p className="ef-eyebrow mb-3">
+          <i className="dot" />
+          Blueprint
+        </p>
+        <h2 className="ef-sec-title mb-2">{blueprint.h2}</h2>
+        <p className="ef-sec-lede mb-8">{blueprint.intro}</p>
+        <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
+          {blueprint.pages.map((page, i) => (
+            <article key={page.title} className="ef-card ef-bar-left p-6">
+              <div className="ef-icon-well">{String(i + 1).padStart(2, "0")}</div>
+              <h3 className="text-lg font-semibold text-ef-ink">{page.title}</h3>
+              <p className="mt-2 text-sm text-ef-muted">{page.body}</p>
             </article>
           ))}
         </div>
-        <p className="mt-8 text-sm text-ef-muted">{outreachNote}</p>
+      </Section>
+
+      <Section alt>
+        <h2 className="ef-sec-title mb-6">{packageFit.h2}</h2>
+        <div className="grid gap-3.5 md:grid-cols-3">
+          {packageFit.items.map((item) => (
+            <article key={item.name} className="ef-card p-6">
+              <h3 className="text-lg font-semibold text-ef-ink">{item.name}</h3>
+              <p className="mt-1 text-sm font-semibold text-ef-accent-strong">{item.price}</p>
+              <p className="mt-3 text-sm text-ef-muted">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <h2 className="ef-sec-title mb-6">Agent FAQs</h2>
+        <div className="ef-faq mx-auto max-w-2xl space-y-2">
+          {faqs.map((faq) => (
+            <details key={faq.q} className="ef-card px-5 py-3">
+              <summary className="cursor-pointer font-semibold text-ef-ink">{faq.q}</summary>
+              <p className="mt-2 text-sm text-ef-muted">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </Section>
+
+      <Section alt>
+        <h2 className="ef-sec-title mb-2">{dm.h2}</h2>
+        <p className="ef-sec-lede mb-6">{dm.body}</p>
+        <ButtonLink href={sampleCta.href} variant="secondary">
+          {sampleCta.label}
+        </ButtonLink>
       </Section>
 
       <CtaBand

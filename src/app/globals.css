@@ -14,8 +14,8 @@
   --ef-accent-strong: #d9732e;
 
   /* Surfaces & text */
-  --ef-surface: #ffffff;
-  --ef-surface-2: #f8fafc;
+  --ef-surface: #fff8f1;
+  --ef-surface-2: #f3eee8;
   --ef-ink: #1e293b;
   --ef-muted: #64748b;
 
@@ -25,7 +25,7 @@
 
   /* Page wash stops */
   --ef-wash-1: #fff7ed;
-  --ef-wash-2: #f8fafc;
+  --ef-wash-2: #f5f0eb;
   --ef-wash-3: #fff1e6;
 
   /* Type */

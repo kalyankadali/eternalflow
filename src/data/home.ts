@@ -1,21 +1,21 @@
-/** Week 1 Home copy — R1 hero lock + scrub pack */
+/** Home — R1 hero lock + Section C + Design B */
 export const homeCopy = {
   meta: {
     title: "Better Websites for Real Estate Builders & Agents | EternalFlow",
     description:
-      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free website review.",
+      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free review with Kalyan.",
   },
   hero: {
     brand: "EternalFlow",
     h1: "Better Websites For Real Estate Builders & Agents",
     sub: "Productized websites, CRM & ads for real estate builders and agents in India.",
     body: "Hyderabad-based. Project launches, agent brands, and WhatsApp enquiries that don't die in a chat thread.",
-    primaryCta: { label: "Book a free website review", href: "/get-started" },
+    primaryCta: { label: "Book a free review with Kalyan", href: "/get-started" },
     secondaryCta: { label: "See sample sites", href: "/work" },
   },
   trust: [
-    "Built for real estate",
     "Hyderabad",
+    "Builders & agents only",
     "One-off packages",
     "WhatsApp-first",
   ],
@@ -25,18 +25,18 @@ export const homeCopy = {
       "Most real estate sites look fine until a buyer asks for a site visit.",
     cards: [
       {
-        h3: "Project pages that don't convert",
-        title: "Outdated project sites",
-        body: "Towers and inventory updates sit in PDFs. Buyers bounce before they book a site visit.",
+        quote: "The brochure is in a PDF. Can you just WhatsApp the price list?",
+        label: "Project pages that don't convert",
+        body: "Towers and inventory updates sit in files buyers never open. Site visits never get booked.",
       },
       {
-        h3: "Agents lost behind portal ads",
-        title: "Weak agent brands",
+        quote: "I saw you on the portal — do you have your own site?",
+        label: "Agents lost behind portal ads",
         body: "Your name should own the conversation — not another listing card in a feed.",
       },
       {
-        h3: "Enquiries with no CRM follow-up",
-        title: "Leads dying on WhatsApp",
+        quote: "I messaged last week about the 3BHK. Did anyone follow up?",
+        label: "Enquiries dying on WhatsApp",
         body: "Numbers arrive. Nobody owns the pipeline. Hot leads go cold by Friday.",
       },
     ],
@@ -44,7 +44,7 @@ export const homeCopy = {
   offer: {
     h2: "One stack for builders and agents",
     intro:
-      "Website + CRM + online ads — productized so you know what ships before you start.",
+      "Website + CRM + enquiry-ready pages — productized so you know what ships before you start.",
     cards: [
       {
         h3: "Website",
@@ -56,8 +56,8 @@ export const homeCopy = {
         badge: "Growth+",
       },
       {
-        h3: "Online ads",
-        body: "Traffic that lands on a site built to book site visits — not a homepage that explains nothing.",
+        h3: "Enquiry-ready pages",
+        body: "Sites built to book site visits — so when traffic comes (organic, referral, or ads you already run), it lands somewhere that converts.",
       },
     ],
     link: { label: "Explore services", href: "/services" },
@@ -93,19 +93,32 @@ export const homeCopy = {
   },
   process: {
     h2: "Live in four weeks.",
-    steps: ["Discovery", "Design", "Build", "Launch", "Optional monthly maintenance"],
-    body: "Discovery → design → build → launch. Packages are one-off project fees. After go-live, optional monthly maintenance keeps launches and inventory current — amount TBD, separate from the package.",
+    steps: ["Discovery", "Design", "Build", "Launch", "Optional monthly care"],
+    body: "Discovery → design → build → launch. Packages are one-off project fees. After go-live, optional monthly care at ₹4,999/mo keeps launches and inventory current — separate from the package.",
   },
-  /** Hide until real quotes — do not invent social proof */
   testimonials: {
-    visible: false,
+    visible: true,
     h2: "What clients say",
-    note: "Section omitted until we have client permission to publish.",
+    note: "Example quotes — labeled until we have permission to publish real ones.",
   },
   finalCta: {
-    h2: "Book a free website review",
-    body: "No sales pitch. We'll show what's costing you enquiries — and the clear next step on WhatsApp.",
-    primaryCta: { label: "Book a free website review", href: "/get-started" },
-    secondaryCta: { label: "Chat on WhatsApp", href: "whatsapp" },
+    h2: "Book a free review with Kalyan",
+    body: "No sales pitch. Gaps on your enquiry path → which package fits → clear next step on WhatsApp.",
+    steps: [
+      {
+        title: "You reach out",
+        body: "WhatsApp Kalyan or the short form.",
+      },
+      {
+        title: "We review",
+        body: "Site (or no site), enquiry path, package fit.",
+      },
+      {
+        title: "Clear next step",
+        body: "Gaps, Starter / Growth / Pro, and how we start.",
+      },
+    ],
+    primaryCta: { label: "Book a free review with Kalyan", href: "/get-started" },
+    secondaryCta: { label: "WhatsApp Kalyan", href: "whatsapp" },
   },
 } as const;

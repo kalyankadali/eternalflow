@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const { hero, why, model, values, location, cta } = aboutCopy;
+  const { hero, why, model, team, values, location, cta } = aboutCopy;
 
   return (
     <>
@@ -39,6 +39,25 @@ export default function AboutPage() {
       </Section>
 
       <Section>
+        <h2 className="ef-sec-title text-center">{team.h2}</h2>
+        <div className="mt-8 grid gap-3.5 md:grid-cols-3">
+          {team.people.map((person) => (
+            <article key={person.name} className="ef-card flex flex-col items-center p-6 text-center">
+              <div
+                className="grid h-16 w-16 place-items-center rounded-full border border-ef-accent-soft bg-ef-accent-muted text-sm font-extrabold text-ef-accent-strong sm:h-20 sm:w-20 sm:text-base"
+                aria-hidden
+              >
+                {person.initials}
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-ef-ink">{person.name}</h3>
+              <p className="mt-1 text-sm font-medium text-ef-accent">{person.role}</p>
+              <p className="mt-2 text-sm text-ef-muted">{person.bio}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section alt>
         <h2 className="ef-sec-title text-center">Values</h2>
         <div className="mt-8 grid gap-3.5 md:grid-cols-3">
           {values.map((value) => (
@@ -51,7 +70,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section alt>
+      <Section>
         <div className="ef-panel mx-auto max-w-[760px] p-7 text-center">
           <h2 className="ef-sec-title">{location.h2}</h2>
           <p className="ef-sec-lede mx-auto mt-3">{location.body}</p>
