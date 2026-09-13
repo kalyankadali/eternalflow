@@ -17,7 +17,7 @@ export default function Page() {
         We collect only what we need to respond to enquiries (name, phone, optional WhatsApp and message) and to improve our service.
       </p>
       <p className="mt-3 max-w-2xl text-ef-muted">
-        We do not sell your data. Contact hello@eternalflow.in for privacy questions. Full policy copy will be finalized with legal review.
+        We do not sell your data. Contact hello@eternalflow.co for privacy questions. Full policy copy will be finalized with legal review.
       </p>
       <div className="mt-8">
         <ButtonLink href="/get-started">Book free review</ButtonLink>

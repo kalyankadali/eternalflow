@@ -3,7 +3,7 @@ export const homeCopy = {
   meta: {
     title: "Websites for Real Estate | Eternalflow — Hyderabad",
     description:
-      "Productized websites, CRM & ads for real estate projects and agents in India. Clear packages. Book a free website review.",
+      "Productized websites, CRM & ads for real estate projects and agents in India. Clear one-off packages on eternalflow.co. Book a free website review.",
   },
   hero: {
     h1: "Eternal Flow Builds Better Websites, Every Time.",
@@ -64,7 +64,7 @@ export const homeCopy = {
   packages: {
     h2: "Clear packages. Pick a lane.",
     intro:
-      "Starter, Growth, or Pro. Deliverables listed up front. Pricing in INR shared on your review call — we don't hide what's included.",
+      "Starter, Growth, or Pro — one-off project fees. Deliverables and INR listed up front — no proposal theatre.",
     cta: { label: "See full pricing", href: "/pricing" },
   },
   niche: {
@@ -91,9 +91,9 @@ export const homeCopy = {
     cta: { label: "See all work", href: "/work" },
   },
   process: {
-    h2: "Live in four weeks. Then unlimited updates.",
-    steps: ["Discovery", "Design", "Build", "Launch", "Unlimited updates"],
-    body: "Discovery → design → build → launch. After go-live, membership covers ongoing updates so your site keeps pace with launches and inventory.",
+    h2: "Live in four weeks.",
+    steps: ["Discovery", "Design", "Build", "Launch", "Optional monthly maintenance"],
+    body: "Discovery → design → build → launch. Starter, Growth, and Pro are one-off project fees. After go-live, optional monthly maintenance keeps launches and inventory current — amount TBD, separate from the package.",
   },
   /** Hide until real quotes — do not invent social proof */
   testimonials: {

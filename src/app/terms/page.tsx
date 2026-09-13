@@ -17,7 +17,7 @@ export default function Page() {
         By using this site or booking a review, you agree to communicate in good faith and provide accurate contact details.
       </p>
       <p className="mt-3 max-w-2xl text-ef-muted">
-        Package terms, membership, and cancel policy will be published here after founder sign-off. Questions: hello@eternalflow.in.
+        Packages are one-off project fees. Optional monthly maintenance after launch is priced separately (TBD). Questions: hello@eternalflow.co.
       </p>
       <div className="mt-8">
         <ButtonLink href="/get-started">Book free review</ButtonLink>

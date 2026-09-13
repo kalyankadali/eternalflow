@@ -54,17 +54,17 @@ export const pageMeta = {
   home: {
     title: "Websites for Real Estate | Eternalflow — Hyderabad",
     description:
-      "Productized websites, CRM & ads for real estate projects and agents in India. Clear packages. Book a free website review.",
+      "Productized websites, CRM & ads for real estate projects and agents in India. Clear one-off packages on eternalflow.co. Book a free website review.",
   },
   pricing: {
     title: "Pricing | Eternalflow — Websites for Real Estate",
     description:
-      "Transparent Starter, Growth, and Pro packages for real estate websites, CRM, and ads. See what's included. Book a free review.",
+      "Transparent one-off Starter, Growth, and Pro packages for real estate websites, CRM, and ads on eternalflow.co. See what's included. Book a free review.",
   },
   getStarted: {
     title: "Book a Free Website Review | Eternalflow",
     description:
-      "Free website review for real estate projects and agents. Tell us what's live today — we'll show what's costing you enquiries. WhatsApp or form.",
+      "Free website review for real estate projects and agents on eternalflow.co. Tell us what's live today — we'll show what's costing you enquiries. WhatsApp or form.",
   },
   services: {
     title: "Services | Eternalflow — Websites for Real Estate",

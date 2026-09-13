@@ -33,7 +33,7 @@ export const pricingTiers: PricingTier[] = [
     name: "Starter",
     blurb: "A sharp 5-page site, shipped in four weeks.",
     priceLabel: "₹24,999",
-    priceNote: "one-time project",
+    priceNote: "one-off project",
     ctaLabel: "Book a free website review",
     features: [
       "5-page custom website",
@@ -50,7 +50,7 @@ export const pricingTiers: PricingTier[] = [
     name: "Growth",
     blurb: "Site + CRM + chat — the core stack for enquiries and follow-up.",
     priceLabel: "₹39,999",
-    priceNote: "one-time project",
+    priceNote: "one-off project",
     popular: true,
     popularLabel: "Most popular",
     ctaLabel: "Book a free website review",
@@ -69,7 +69,7 @@ export const pricingTiers: PricingTier[] = [
     name: "Pro",
     blurb: "Automations and AI on top of the Growth stack.",
     priceLabel: "₹59,999",
-    priceNote: "one-time project",
+    priceNote: "one-off project",
     ctaLabel: "Book a free website review",
     includesPrevious: "Everything in Growth, plus",
     features: [
@@ -132,7 +132,7 @@ export const alwaysIncluded = [
   "Mobile-friendly build",
   "Hosting, security & SSL",
   "Daily backups",
-  "Unlimited updates on membership",
+  "Unlimited updates on optional maintenance",
 ];
 
 export const pricingAddOns = [
@@ -142,8 +142,8 @@ export const pricingAddOns = [
 
 export const pricingFaqs = [
   {
-    q: "Do you publish INR prices on the site?",
-    a: "Yes. Starter is ₹24,999, Growth is ₹39,999, and Pro is ₹59,999 — shown on Pricing. Book a free review if you want help choosing the right package.",
+    q: "What do the packages cost?",
+    a: "Starter is ₹24,999. Growth is ₹39,999. Pro is ₹59,999. What's included is listed on each card — book a free review if you're unsure which fits.",
   },
   {
     q: "What's the difference between Starter and Growth?",
@@ -158,12 +158,16 @@ export const pricingFaqs = [
     a: "Starter ships on a four-week timeline. Growth and Pro follow the same build rhythm; CRM and AI pieces are scoped in discovery so nothing is promised loosely.",
   },
   {
-    q: 'What does "unlimited updates" mean?',
-    a: "After launch, membership covers ongoing website updates — copy tweaks, new project announcements, inventory notes you send us — so the site stays current without a new project every time.",
+    q: "Are Starter, Growth, and Pro monthly subscriptions?",
+    a: "No. They are one-off project fees. You pay for the build and what's listed in the package — not a cancel-anytime membership for those tiers.",
   },
   {
-    q: "Can I cancel or take the site elsewhere?",
-    a: "Membership and ownership terms are being finalized with legal. We'll state cancel and portability policy clearly before you pay — fair, month-to-month language, no surprises.",
+    q: 'What does "unlimited updates" mean?',
+    a: "Updates listed in your package (and Growth's routine launch/announcement updates) are part of that project scope. For ongoing care after launch — copy tweaks, new inventory notes, fresh announcements on a monthly rhythm — we offer optional monthly maintenance as a separate add-on. Amount TBD; we won't invent a rupee figure until it's locked.",
+  },
+  {
+    q: "Can I skip maintenance or take the site elsewhere?",
+    a: "Yes on maintenance — it's optional and separate from the one-off package fee. Site ownership and portability terms are being finalized with legal; we'll state them clearly before you pay.",
   },
   {
     q: "Do you only work with real estate?",

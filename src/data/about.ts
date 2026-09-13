@@ -15,7 +15,7 @@ export const aboutCopy = {
   },
   model: {
     h2: "Productized, not proposal theatre",
-    body: "Starter, Growth, and Pro list deliverables up front. You self-qualify. INR is shared clearly on your review call until public list prices are locked.",
+    body: "Starter ₹24,999, Growth ₹39,999, and Pro ₹59,999. Deliverables listed up front. You self-qualify — no proposal theatre.",
   },
   values: [
     {

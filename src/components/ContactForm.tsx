@@ -73,12 +73,13 @@ export function ContactForm() {
       </div>
 
       <label className="flex flex-col gap-1 text-sm text-ef-ink">
-        <span>Name</span>
+        <span>Your name</span>
         <input
           name="name"
           type="text"
           required
           maxLength={120}
+          placeholder="Full name"
           className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
         />
       </label>
@@ -89,21 +90,23 @@ export function ContactForm() {
           name="phone"
           type="tel"
           required
+          placeholder="10-digit mobile"
           className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
         />
       </label>
 
       <label className="flex flex-col gap-1 text-sm text-ef-ink">
-        <span>WhatsApp (optional)</span>
+        <span>WhatsApp number</span>
         <input
           name="whatsapp"
           type="tel"
+          placeholder="Same as phone? We’ll use this to reply"
           className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
         />
       </label>
 
       <label className="flex flex-col gap-1 text-sm text-ef-ink">
-        <span>Role</span>
+        <span>I am a…</span>
         <select
           name="role"
           required
@@ -122,11 +125,11 @@ export function ContactForm() {
       </label>
 
       <label className="flex flex-col gap-1 text-sm text-ef-ink">
-        <span>Website URL (optional)</span>
+        <span>Current website</span>
         <input
           name="website"
           type="url"
-          placeholder="https://"
+          placeholder="Optional — paste URL or leave blank"
           className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
         />
       </label>
@@ -151,31 +154,36 @@ export function ContactForm() {
       </label>
 
       <label className="flex flex-col gap-1 text-sm text-ef-ink">
-        <span>Message (optional)</span>
+        <span>Anything we should know?</span>
         <textarea
           name="message"
           rows={4}
           maxLength={2000}
+          placeholder="Project launch, city, timeline…"
           className="rounded-xl border border-ef-border bg-ef-surface-2 px-3 py-2 text-ef-ink placeholder:text-ef-muted"
         />
       </label>
+
+      <p className="text-xs text-ef-muted">
+        Fields marked required. We reply on WhatsApp within one business day.
+      </p>
 
       <button
         type="submit"
         disabled={status === "pending"}
         className="rounded-full bg-ef-accent px-5 py-2.5 text-sm font-medium text-ef-on-accent hover:bg-ef-accent-strong disabled:opacity-60"
       >
-        {status === "pending" ? "Sending…" : "Book free website review"}
+        {status === "pending" ? "Sending…" : "Send my details"}
       </button>
 
       {status === "success" ? (
         <p className="text-sm text-emerald-700 dark:text-emerald-400" role="status">
-          Thanks — we&apos;ll reply on WhatsApp or email within one business day.
+          Got it — we&apos;ll reply on WhatsApp within one business day.
         </p>
       ) : null}
       {status === "error" ? (
         <p className="text-sm text-red-700 dark:text-red-400" role="alert">
-          Something went wrong. Try WhatsApp or refresh and submit again.
+          Check the highlighted fields and try again.
         </p>
       ) : null}
     </form>

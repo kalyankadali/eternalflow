@@ -3,7 +3,7 @@ export const getStartedCopy = {
   meta: {
     title: "Book a Free Website Review | Eternalflow",
     description:
-      "Free website review for real estate projects and agents. Tell us what's live today — we'll show what's costing you enquiries. WhatsApp or form.",
+      "Free website review for real estate projects and agents on eternalflow.co. Tell us what's live today — we'll show what's costing you enquiries. WhatsApp or form.",
   },
   promise: {
     h1: "Free website review",
@@ -28,7 +28,7 @@ export const getStartedCopy = {
       },
       {
         title: "Clear next step",
-        body: "Gaps, recommended package, and INR on the call. No foggy proposals.",
+        body: "Gaps, recommended package (Starter ₹24,999 / Growth ₹39,999 / Pro ₹59,999), and how we start. No foggy proposals.",
       },
     ],
   },

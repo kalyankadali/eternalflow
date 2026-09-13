@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eternalflow
 
-## Getting Started
+Marketing site for Eternalflow — productized websites, CRM, and ads for real estate businesses and agents in India. Based in Hyderabad.
 
-First, run the development server:
+- **Domain:** [eternalflow.co](https://eternalflow.co)
+- **Stack:** Next.js 15 (App Router) + TypeScript + Tailwind CSS + next-themes
+- **Primary CTA:** Book a free website review (form + WhatsApp)
+
+## Packages (one-off)
+
+| Tier | Price | Note |
+|------|--------|------|
+| Starter | ₹24,999 | one-time project |
+| Growth | ₹39,999 | one-time project |
+| Pro | ₹59,999 | one-time project |
+
+Optional monthly maintenance after launch is TBD (no public monthly INR yet). CRM copy stays generic — no vendor names.
+
+## Local
 
 ```bash
+cp .env.example .env.local
+# set NEXT_PUBLIC_WHATSAPP_NUMBER=919989470565
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Env (Vercel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Name | Notes |
+|------|--------|
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Digits only, e.g. `919989470565` |
+| `NEXT_PUBLIC_SITE_URL` | `https://eternalflow.co` |
+| `LEAD_NOTIFY_EMAIL` | Optional lead inbox |
+| `LEAD_WEBHOOK_URL` | Optional CRM webhook |
+| `GOOGLE_SHEET_WEBHOOK_URL` | Optional sheet append |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+WhatsApp deep link uses `Hi Eternalflow — I'd like a free website review.`
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`.env.local` is gitignored. Do not commit secrets.

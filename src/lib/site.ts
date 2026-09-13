@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Eternal Flow Builds Better Websites, Every Time.",
   description:
     "Productized websites, CRM & ads for real estate businesses and agents in India. Based in Hyderabad.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://eternalflow.in",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://eternalflow.co",
   locale: "en_IN",
   location: {
     city: "Hyderabad",
@@ -12,7 +12,7 @@ export const siteConfig = {
     country: "IN",
     addressCountry: "IN",
   },
-  email: "hello@eternalflow.in",
+  email: "hello@eternalflow.co",
   defaultWhatsAppMessage:
     "Hi Eternalflow — I'd like a free website review.",
   titleTemplate: "%s | Eternalflow — Websites for Real Estate",
