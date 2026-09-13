@@ -1,39 +1,102 @@
 @import "tailwindcss";
 
+/**
+ * Eternalflow runtime tokens — mirrored from
+ * /workspace/eternalflow/design/tokens/tokens.css (R3 canonical).
+ * Do not invent alternate hex values.
+ */
+
 :root {
+  /* Accent */
   --ef-accent: #ea8b4a;
   --ef-accent-soft: #f3c19a;
   --ef-accent-muted: #fff4eb;
   --ef-accent-strong: #d9732e;
+
+  /* Surfaces & text */
   --ef-surface: #ffffff;
   --ef-surface-2: #f8fafc;
   --ef-ink: #1e293b;
   --ef-muted: #64748b;
+
+  /* Focus / chrome */
   --ef-ring: #ea8b4a;
-  --ef-page-wash-1: #fff7ed;
-  --ef-page-wash-2: #f8fafc;
-  --ef-page-wash-3: #fff1e6;
   --ef-theme-color: #fff7ed;
-  --ef-border: #e7e5e4;
-  --ef-shadow: 0 1px 3px rgba(28, 25, 23, 0.06), 0 4px 16px rgba(28, 25, 23, 0.04);
+
+  /* Page wash stops */
+  --ef-wash-1: #fff7ed;
+  --ef-wash-2: #f8fafc;
+  --ef-wash-3: #fff1e6;
+
+  /* Type */
+  --ef-font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --ef-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+
+  /* Radius */
+  --ef-radius-card: 12px;
+  --ef-radius-card-lg: 16px;
+  --ef-radius-pill: 9999px;
+  --ef-radius-input: 12px;
+
+  /* Soft stone shadows (light) */
+  --ef-shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.04),
+    0 1px 3px rgba(28, 25, 23, 0.06);
+  --ef-shadow-md: 0 4px 12px rgba(28, 25, 23, 0.06),
+    0 2px 4px rgba(28, 25, 23, 0.04);
+  --ef-shadow-lg: 0 12px 32px rgba(28, 25, 23, 0.08),
+    0 4px 8px rgba(28, 25, 23, 0.04);
+
+  /* Motion */
+  --ef-duration-fast: 150ms;
+  --ef-duration: 200ms;
+  --ef-duration-slow: 250ms;
+  --ef-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Semantic helpers */
+  --ef-on-accent: #ffffff;
+  --ef-border: color-mix(in srgb, var(--ef-ink) 10%, transparent);
+  --ef-page-bg: radial-gradient(
+    ellipse 120% 80% at 50% -20%,
+    var(--ef-wash-1) 0%,
+    var(--ef-wash-2) 45%,
+    var(--ef-wash-3) 100%
+  );
+
+  /* Compat aliases used by early Week 1 stubs */
+  --ef-page-wash-1: var(--ef-wash-1);
+  --ef-page-wash-2: var(--ef-wash-2);
+  --ef-page-wash-3: var(--ef-wash-3);
+  --ef-shadow: var(--ef-shadow-md);
 }
 
-.dark {
+.dark,
+html.dark,
+body.dark {
   --ef-accent: #f0a46a;
   --ef-accent-soft: #c47a45;
   --ef-accent-muted: #2a2118;
   --ef-accent-strong: #f5b784;
+
   --ef-surface: #1c1917;
   --ef-surface-2: #292524;
   --ef-ink: #f5f5f4;
   --ef-muted: #a8a29e;
+
   --ef-ring: #f0a46a;
-  --ef-page-wash-1: #1c1410;
-  --ef-page-wash-2: #0c0a09;
-  --ef-page-wash-3: #1a1512;
   --ef-theme-color: #1c1917;
-  --ef-border: #44403c;
-  --ef-shadow: 0 1px 3px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.25);
+
+  --ef-wash-1: #1c1410;
+  --ef-wash-2: #0c0a09;
+  --ef-wash-3: #1a1512;
+
+  --ef-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --ef-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --ef-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.25);
+
+  --ef-on-accent: #1c1917;
+  --ef-border: color-mix(in srgb, var(--ef-ink) 12%, transparent);
 }
 
 @theme inline {
@@ -47,10 +110,13 @@
   --color-ef-muted: var(--ef-muted);
   --color-ef-ring: var(--ef-ring);
   --color-ef-border: var(--ef-border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --radius-card: 14px;
-  --radius-pill: 9999px;
+  --color-ef-on-accent: var(--ef-on-accent);
+  --font-sans: var(--font-geist-sans), var(--ef-font-sans);
+  --font-mono: var(--font-geist-mono), var(--ef-font-mono);
+  --radius-card: var(--ef-radius-card);
+  --radius-card-lg: var(--ef-radius-card-lg);
+  --radius-pill: var(--ef-radius-pill);
+  --radius-input: var(--ef-radius-input);
 }
 
 html {
@@ -58,16 +124,11 @@ html {
 }
 
 body {
-  background-color: var(--ef-page-wash-2);
-  background-image: radial-gradient(
-    ellipse 120% 80% at 50% -20%,
-    var(--ef-page-wash-1),
-    var(--ef-page-wash-2) 45%,
-    var(--ef-page-wash-3) 100%
-  );
+  background-color: var(--ef-wash-2);
+  background-image: var(--ef-page-bg);
   background-attachment: fixed;
   color: var(--ef-ink);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-geist-sans), var(--ef-font-sans);
   min-height: 100vh;
 }
 
