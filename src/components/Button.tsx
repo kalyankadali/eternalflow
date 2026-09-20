@@ -27,7 +27,13 @@ type Common = {
 };
 
 function classes(variant: Variant, size: Size, className: string) {
-  return `ef-btn inline-flex items-center justify-center gap-2 rounded-full font-semibold leading-tight tracking-[0.01em] transition-[background-color,border-color,color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ef-ring disabled:pointer-events-none disabled:opacity-50 ${variants[variant]} ${sizes[size]} ${className}`;
+  // Omit default inline-flex when caller sets display (e.g. hidden lg:inline-flex),
+  // otherwise base inline-flex wins over Tailwind `hidden` in the stylesheet.
+  const hasDisplay = /(?:^|\s)(?:sm:|md:|lg:|xl:|2xl:|max-sm:|max-md:|max-lg:|max-xl:)?(?:hidden|inline-flex|inline-block|block|flex|contents|grid)(?:\s|$)/.test(
+    className,
+  );
+  const display = hasDisplay ? "" : "inline-flex";
+  return `ef-btn ${display} items-center justify-center gap-2 rounded-full font-semibold leading-tight tracking-[0.01em] transition-[background-color,border-color,color,box-shadow,transform] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ef-ring disabled:pointer-events-none disabled:opacity-50 ${variants[variant]} ${sizes[size]} ${className}`.replace(/\s+/g, " ").trim();
 }
 
 export function Button({
