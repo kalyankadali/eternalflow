@@ -101,7 +101,7 @@ export function ContactForm() {
         <input
           name="whatsapp"
           type="tel"
-          placeholder="Same as phone? We’ll use this to reply"
+          placeholder="WhatsApp number"
           className="ef-field font-normal placeholder:text-ef-muted"
         />
       </label>
@@ -130,7 +130,7 @@ export function ContactForm() {
         <input
           name="website"
           type="url"
-          placeholder="Optional — paste URL or leave blank"
+          placeholder="Website URL (optional)"
           className="ef-field font-normal placeholder:text-ef-muted"
         />
       </label>
