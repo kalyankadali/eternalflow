@@ -14,16 +14,18 @@ export function StickyMobileBar() {
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center rounded-full bg-[#25D366] px-3 py-3 text-sm font-semibold text-white no-underline"
+            aria-label={siteConfig.cta.whatsapp}
+            className="inline-flex min-w-0 flex-1 items-center justify-center truncate rounded-full bg-[#25D366] px-2 py-3 text-xs font-semibold text-white no-underline sm:px-3 sm:text-sm"
           >
-            {siteConfig.cta.whatsapp}
+            WhatsApp
           </a>
         ) : null}
         <Link
           href="/get-started"
-          className="inline-flex flex-1 items-center justify-center rounded-full bg-ef-accent px-3 py-3 text-sm font-semibold text-ef-on-accent no-underline"
+          aria-label={siteConfig.cta.bookReview}
+          className="inline-flex min-w-0 flex-1 items-center justify-center truncate rounded-full bg-ef-accent px-2 py-3 text-xs font-semibold text-ef-on-accent no-underline sm:px-3 sm:text-sm"
         >
-          {siteConfig.cta.bookReviewShort}
+          Book review
         </Link>
       </div>
     </div>

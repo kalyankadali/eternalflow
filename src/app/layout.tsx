@@ -61,10 +61,12 @@ export default function RootLayout({
           </a>
           <LocalBusinessJsonLd />
           <SiteHeader />
-          <main id="main" className="flex-1 pb-24 md:pb-0">
-            {children}
-          </main>
-          <SiteFooter />
+          <div className="flex flex-1 flex-col pb-24 md:pb-0">
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <SiteFooter />
+          </div>
           <WhatsAppFab />
           <StickyMobileBar />
         </ThemeProvider>

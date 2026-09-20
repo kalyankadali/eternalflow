@@ -49,11 +49,11 @@ export default function HomePage() {
             <h1 className="ef-display mb-4 max-w-[18ch] sm:max-w-[20ch]">{hero.h1}</h1>
             <p className="mb-3 max-w-[42ch] text-[1.12rem] text-ef-muted">{hero.sub}</p>
             <p className="mb-7 max-w-[46ch] text-base text-ef-muted">{hero.body}</p>
-            <div className="mb-5 flex flex-wrap gap-3">
-              <ButtonLink href={hero.primaryCta.href} size="lg">
+            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <ButtonLink href={hero.primaryCta.href} size="lg" className="w-full sm:w-auto">
                 {hero.primaryCta.label}
               </ButtonLink>
-              <ButtonLink href={hero.secondaryCta.href} variant="secondary" size="lg">
+              <ButtonLink href={hero.secondaryCta.href} variant="secondary" size="lg" className="w-full sm:w-auto">
                 {hero.secondaryCta.label}
               </ButtonLink>
             </div>
@@ -137,7 +137,7 @@ export default function HomePage() {
             <p className="ef-sec-lede">{packages.intro}</p>
           </div>
         </div>
-        <div className="grid items-stretch gap-4 sm:grid-cols-3 sm:py-3">
+        <div className="grid items-stretch gap-4 md:grid-cols-3 md:py-3">
           {pricingTiers.map((tier) => (
             <article
               key={tier.id}

@@ -87,7 +87,7 @@ export function SiteHeader() {
       </Container>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-ef-border md:hidden">
+        <div id="mobile-nav" className="border-t border-ef-border pb-24 md:hidden">
           <Container className="flex flex-col gap-1 py-3">
             {nav.map((item) => (
               <Link

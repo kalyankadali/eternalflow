@@ -13,7 +13,7 @@ export default function GetStartedPage() {
   const { promise, whatsappPanel, next, trust } = getStartedCopy;
 
   return (
-    <section className="relative overflow-hidden px-5 py-9 pb-20 md:px-7 sm:py-12 sm:pb-20">
+    <section className="relative overflow-hidden px-5 py-9 pb-28 md:px-7 sm:py-12 sm:pb-20">
       <div className="ef-orb absolute -top-[60px] -right-10 h-[300px] w-[300px]" />
       <div className="relative z-[1] mx-auto grid w-full max-w-[1180px] gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 lg:items-start">
         <div>

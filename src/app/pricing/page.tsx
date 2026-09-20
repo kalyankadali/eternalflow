@@ -101,7 +101,10 @@ export default function PricingPage() {
         <p className="ef-sec-lede mx-auto mb-6 text-center">
           Feature matrix for Starter, Growth, and Pro.
         </p>
-        <div className="overflow-x-auto rounded-[var(--ef-radius-card-lg)] border border-ef-border bg-ef-surface shadow-[var(--ef-shadow-md)]">
+        <p className="mb-2 text-center text-xs font-medium text-ef-muted lg:hidden" aria-hidden="true">
+          Swipe for full compare →
+        </p>
+        <div className="overflow-x-auto overscroll-x-contain rounded-[var(--ef-radius-card-lg)] border border-ef-border bg-ef-surface shadow-[var(--ef-shadow-md)] [-webkit-overflow-scrolling:touch]">
           <table className="w-full min-w-[36rem] border-collapse text-left text-[13px]">
             <thead>
               <tr>
