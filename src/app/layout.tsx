@@ -61,7 +61,7 @@ export default function RootLayout({
           </a>
           <LocalBusinessJsonLd />
           <SiteHeader />
-          <div className="flex flex-1 flex-col pb-24 md:pb-0">
+          <div className="ef-main-shell flex flex-1 flex-col">
             <main id="main" className="flex-1">
               {children}
             </main>

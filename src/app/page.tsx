@@ -58,13 +58,27 @@ export default function HomePage() {
             <h1 className="ef-display mb-4 max-w-[18ch] sm:max-w-[20ch]">{hero.h1}</h1>
             <p className="mb-3 max-w-[42ch] text-[1.12rem] text-ef-muted">{hero.sub}</p>
             <p className="mb-7 max-w-[46ch] text-base text-ef-muted">{hero.body}</p>
-            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <ButtonLink href={primaryHref} size="lg" className="w-full sm:w-auto" external={primaryHref.startsWith("https://wa.me")}>
                 {primaryLabel}
               </ButtonLink>
-              <ButtonLink href={hero.secondaryCta.href} variant="secondary" size="lg" className="w-full sm:w-auto">
+              {/* md+: secondary button; <md: text link so sticky + hero don't stack two full CTAs */}
+              <span className="hidden md:contents">
+                <ButtonLink
+                  href={hero.secondaryCta.href}
+                  variant="secondary"
+                  size="lg"
+                  className="w-full md:w-auto"
+                >
+                  {hero.secondaryCta.label}
+                </ButtonLink>
+              </span>
+              <Link
+                href={hero.secondaryCta.href}
+                className="text-center text-sm font-semibold text-ef-accent no-underline underline-offset-4 hover:underline md:hidden"
+              >
                 {hero.secondaryCta.label}
-              </ButtonLink>
+              </Link>
             </div>
             <div className="flex flex-wrap gap-x-[18px] gap-y-2.5 text-[13px] font-medium text-ef-muted">
               {trust.map((item) => (
