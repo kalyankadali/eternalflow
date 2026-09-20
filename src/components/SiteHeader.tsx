@@ -72,7 +72,7 @@ export function SiteHeader() {
             <ButtonLink
               href={wa}
               size={ctaSize}
-              className="hidden sm:inline-flex"
+              className="hidden md:inline-flex"
               external
             >
               {siteConfig.cta.whatsapp}
@@ -81,7 +81,7 @@ export function SiteHeader() {
             <ButtonLink
               href="/get-started"
               size={ctaSize}
-              className="hidden sm:inline-flex"
+              className="hidden md:inline-flex"
             >
               {siteConfig.cta.bookReview}
             </ButtonLink>
@@ -118,19 +118,6 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            {wa ? (
-              <ButtonLink href={wa} size="md" className="mt-1" external>
-                {siteConfig.cta.whatsapp}
-              </ButtonLink>
-            ) : null}
-            <ButtonLink
-              href="/get-started"
-              size="md"
-              variant={wa ? "secondary" : "primary"}
-              className="mt-1"
-            >
-              {siteConfig.cta.bookReview}
-            </ButtonLink>
           </Container>
         </div>
       ) : null}
