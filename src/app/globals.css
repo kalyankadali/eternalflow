@@ -709,8 +709,8 @@ th.ef-col-g {
   );
 }
 
-/* Mobile sticky CTA: pad main only while bar is visible */
-@media (max-width: 767px) {
+/* Sticky CTA (< lg): pad main only while bar is visible */
+@media (max-width: 1023px) {
   html.ef-sticky-cta .ef-main-shell {
     padding-bottom: 6rem; /* pb-24 */
   }

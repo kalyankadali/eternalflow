@@ -45,37 +45,37 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="relative overflow-hidden pt-9 pb-12 sm:pt-14 sm:pb-[72px]">
+      <section className="relative overflow-hidden pt-10 pb-14 sm:pt-14 sm:pb-[72px]">
         <div className="mx-auto grid w-full max-w-[1180px] items-center gap-10 px-5 md:px-7 lg:grid-cols-[1.05fr_1fr] lg:gap-12">
           <div>
-            <p className="ef-eyebrow mb-4">
+            <p className="ef-eyebrow mb-5">
               <i className="dot" />
               {hero.brand}
             </p>
-            <p className="mb-2.5 text-[13px] font-semibold uppercase tracking-[0.04em] text-ef-muted">
+            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.04em] text-ef-muted">
               Hyderabad · Real estate specialists
             </p>
-            <h1 className="ef-display mb-4 max-w-[18ch] sm:max-w-[20ch]">{hero.h1}</h1>
-            <p className="mb-3 max-w-[42ch] text-[1.12rem] text-ef-muted">{hero.sub}</p>
-            <p className="mb-7 max-w-[46ch] text-base text-ef-muted">{hero.body}</p>
-            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <h1 className="ef-display mb-5 max-w-[18ch] sm:max-w-[20ch]">{hero.h1}</h1>
+            <p className="mb-4 max-w-[42ch] text-[1.12rem] text-ef-muted">{hero.sub}</p>
+            <p className="mb-8 max-w-[46ch] text-base text-ef-muted">{hero.body}</p>
+            <div className="mb-6 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap sm:items-center">
               <ButtonLink href={primaryHref} size="lg" className="w-full sm:w-auto" external={primaryHref.startsWith("https://wa.me")}>
                 {primaryLabel}
               </ButtonLink>
-              {/* md+: secondary button; <md: text link so sticky + hero don't stack two full CTAs */}
-              <span className="hidden md:contents">
+              {/* lg+: secondary button; <lg: text link so sticky + hero don't stack two full CTAs */}
+              <span className="hidden lg:contents">
                 <ButtonLink
                   href={hero.secondaryCta.href}
                   variant="secondary"
                   size="lg"
-                  className="w-full md:w-auto"
+                  className="w-full lg:w-auto"
                 >
                   {hero.secondaryCta.label}
                 </ButtonLink>
               </span>
               <Link
                 href={hero.secondaryCta.href}
-                className="text-center text-sm font-semibold text-ef-accent no-underline underline-offset-4 hover:underline md:hidden"
+                className="text-center text-sm font-semibold text-ef-accent no-underline underline-offset-4 hover:underline lg:hidden"
               >
                 {hero.secondaryCta.label}
               </Link>

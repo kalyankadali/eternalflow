@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 const SCROLL_THRESHOLD = 110;
 const ROOT_CLASS = "ef-sticky-cta";
 
-/** Fixed bottom bar < md — Chat on WhatsApp | Talk to Kalyan. Shown after scroll past threshold. */
+/** Fixed bottom bar < lg — Chat on WhatsApp | Talk to Kalyan. Shown after scroll past threshold. */
 export function StickyMobileBar() {
   const wa = getWhatsAppUrl();
   const [visible, setVisible] = useState(false);
@@ -34,7 +34,7 @@ export function StickyMobileBar() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-50 border-t border-ef-border bg-[color-mix(in_srgb,var(--ef-surface)_92%,transparent)] px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 backdrop-blur-lg transition-[transform,opacity] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-50 border-t border-ef-border bg-[color-mix(in_srgb,var(--ef-surface)_92%,transparent)] px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 backdrop-blur-lg transition-[transform,opacity] duration-200 ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none lg:hidden ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-full opacity-0"

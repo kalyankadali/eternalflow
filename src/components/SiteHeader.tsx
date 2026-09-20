@@ -46,7 +46,7 @@ export function SiteHeader() {
       <Container className={`flex items-center justify-between gap-3 ${scrolled ? "py-2" : "py-3"}`}>
         <Logo />
 
-        <nav className="hidden items-center gap-[22px] text-sm font-medium md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-[22px] text-sm font-medium lg:flex" aria-label="Primary">
           {nav.map((item) => {
             const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
@@ -72,7 +72,7 @@ export function SiteHeader() {
             <ButtonLink
               href={wa}
               size={ctaSize}
-              className="hidden sm:inline-flex"
+              className="hidden lg:inline-flex"
               external
             >
               {siteConfig.cta.whatsapp}
@@ -81,14 +81,14 @@ export function SiteHeader() {
             <ButtonLink
               href="/get-started"
               size={ctaSize}
-              className="hidden sm:inline-flex"
+              className="hidden lg:inline-flex"
             >
               {siteConfig.cta.bookReview}
             </ButtonLink>
           )}
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ef-border bg-ef-surface text-ef-ink shadow-[var(--ef-shadow-sm)] md:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ef-border bg-ef-surface text-ef-ink shadow-[var(--ef-shadow-sm)] lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-nav"
@@ -106,7 +106,7 @@ export function SiteHeader() {
       </Container>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-ef-border pb-24 md:hidden">
+        <div id="mobile-nav" className="border-t border-ef-border pb-24 lg:hidden">
           <Container className="flex flex-col gap-1 py-3">
             {nav.map((item) => (
               <Link
@@ -118,19 +118,6 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            {wa ? (
-              <ButtonLink href={wa} size="md" className="mt-1" external>
-                {siteConfig.cta.whatsapp}
-              </ButtonLink>
-            ) : null}
-            <ButtonLink
-              href="/get-started"
-              size="md"
-              variant={wa ? "secondary" : "primary"}
-              className="mt-1"
-            >
-              {siteConfig.cta.bookReview}
-            </ButtonLink>
           </Container>
         </div>
       ) : null}
