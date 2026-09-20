@@ -189,7 +189,7 @@ export default function PricingPage() {
 
       <CtaBand
         h2="Not sure which package fits?"
-        body="Book a free website review. We'll map Starter, Growth, or Pro to how you get enquiries today."
+        body="Talk to Kalyan. We'll map Starter, Growth, or Pro to how you get enquiries today."
       />
     </>
   );

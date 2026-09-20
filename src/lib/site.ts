@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "EternalFlow",
   tagline: "Better Websites For Real Estate Builders & Agents",
   description:
-    "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free review with Kalyan.",
+    "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Talk to Kalyan on WhatsApp.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://eternalflow.co",
   locale: "en_IN",
   location: {
@@ -15,9 +15,9 @@ export const siteConfig = {
   email: "hello@eternalflow.co",
   publicContactName: "Kalyan",
   cta: {
-    bookReview: "Book a free review with Kalyan",
-    bookReviewShort: "Review with Kalyan",
-    whatsapp: "WhatsApp Kalyan",
+    bookReview: "Talk to Kalyan",
+    bookReviewShort: "Talk to Kalyan",
+    whatsapp: "Chat on WhatsApp",
   },
   defaultWhatsAppMessage: "Hi Kalyan — I'd like a free website review.",
   monthlyCareLabel: "₹4,999/mo",

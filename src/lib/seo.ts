@@ -54,12 +54,12 @@ export const pageMeta = {
   home: {
     title: "Better Websites for Real Estate Builders & Agents | EternalFlow",
     description:
-      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free website review.",
+      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Talk to Kalyan on WhatsApp.",
   },
   pricing: {
     title: "Pricing | EternalFlow — Websites for Real Estate",
     description:
-      "One-off Starter, Growth, and Pro packages for real estate builders and agents on eternalflow.co. See what's included. Book a free review.",
+      "One-off Starter, Growth, and Pro packages for real estate builders and agents on eternalflow.co. See what's included. Talk to Kalyan.",
   },
   getStarted: {
     title: "Book a Free Website Review | EternalFlow",

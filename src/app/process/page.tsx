@@ -51,7 +51,7 @@ export default function ProcessPage() {
 
       <CtaBand
         h2="See how four weeks would look for you"
-        body="Book a free website review. We'll map discovery to launch against how you get enquiries today."
+        body="Talk to Kalyan. We'll map discovery to launch against how you get enquiries today."
         primaryLabel={cta.label}
         primaryHref={cta.href}
       />

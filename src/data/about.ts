@@ -59,7 +59,7 @@ export const aboutCopy = {
     body: "Based in Hyderabad, Telangana — WhatsApp-first, site-visit obsessed, no fake US social proof.",
   },
   cta: {
-    label: "Book a free review with Kalyan",
+    label: "Talk to Kalyan",
     href: "/get-started",
   },
 } as const;

@@ -57,7 +57,7 @@ export const processCopy = {
     body: "One delivery lead owns your board and weekly check-in. Design and engineering sit behind that seat so you aren't juggling five chats.",
   },
   cta: {
-    label: "Book a free review with Kalyan",
+    label: "Talk to Kalyan",
     href: "/get-started",
   },
 } as const;

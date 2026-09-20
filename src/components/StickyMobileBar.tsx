@@ -2,7 +2,7 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
-/** Fixed bottom bar < md — WhatsApp | Book review. Hides FAB on mobile. */
+/** Fixed bottom bar < md — Chat on WhatsApp | Talk to Kalyan. Hides FAB on mobile. */
 export function StickyMobileBar() {
   const wa = getWhatsAppUrl();
 
@@ -17,7 +17,7 @@ export function StickyMobileBar() {
             aria-label={siteConfig.cta.whatsapp}
             className="inline-flex min-w-0 flex-1 items-center justify-center truncate rounded-full bg-[#25D366] px-2 py-3 text-xs font-semibold text-white no-underline sm:px-3 sm:text-sm"
           >
-            WhatsApp
+            {siteConfig.cta.whatsapp}
           </a>
         ) : null}
         <Link
@@ -25,7 +25,7 @@ export function StickyMobileBar() {
           aria-label={siteConfig.cta.bookReview}
           className="inline-flex min-w-0 flex-1 items-center justify-center truncate rounded-full bg-ef-accent px-2 py-3 text-xs font-semibold text-ef-on-accent no-underline sm:px-3 sm:text-sm"
         >
-          Book review
+          {siteConfig.cta.bookReview}
         </Link>
       </div>
     </div>

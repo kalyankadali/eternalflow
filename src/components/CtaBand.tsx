@@ -44,12 +44,17 @@ export function CtaBand({
           </ol>
         ) : null}
         <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-          <ButtonLink href={primaryHref} size="lg" className="w-full sm:w-auto">
+          {whatsapp ? (
+            <WhatsAppLink className="inline-flex w-full items-center justify-center rounded-full bg-ef-accent px-[26px] py-3.5 text-base font-semibold text-ef-on-accent no-underline shadow-[var(--ef-shadow-sm)] transition-[background-color,transform,box-shadow] duration-200 hover:-translate-y-px hover:bg-ef-accent-strong hover:shadow-[var(--ef-shadow-md)] hover:no-underline sm:w-auto" />
+          ) : null}
+          <ButtonLink
+            href={primaryHref}
+            variant={whatsapp ? "secondary" : "primary"}
+            size="lg"
+            className="w-full sm:w-auto"
+          >
             {primaryLabel}
           </ButtonLink>
-          {whatsapp ? (
-            <WhatsAppLink className="inline-flex w-full items-center justify-center rounded-full border-[1.5px] border-ef-accent bg-[color-mix(in_srgb,var(--ef-surface)_70%,transparent)] px-[26px] py-3.5 text-base font-semibold text-ef-accent backdrop-blur-sm transition-[background-color,transform] duration-200 hover:-translate-y-px hover:bg-ef-accent-muted hover:text-ef-accent-strong hover:no-underline sm:w-auto" />
-          ) : null}
         </div>
       </Container>
     </div>

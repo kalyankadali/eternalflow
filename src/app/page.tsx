@@ -7,6 +7,8 @@ import { Section } from "@/components/Section";
 import { homeCopy, workDemos } from "@/data";
 import { pricingTiers } from "@/lib/pricing";
 import { pageMeta } from "@/lib/seo";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { siteConfig } from "@/lib/site";
 
 export const metadata = {
   title: { absolute: pageMeta.home.title },
@@ -33,6 +35,13 @@ const workUrls: Record<string, string> = {
 export default function HomePage() {
   const { hero, trust, problem, offer, packages, niche, work, process, testimonials, finalCta } =
     homeCopy;
+  const wa = getWhatsAppUrl();
+  const primaryHref =
+    hero.primaryCta.href === "whatsapp" ? (wa ?? "/get-started") : hero.primaryCta.href;
+  const primaryLabel =
+    hero.primaryCta.href === "whatsapp" && !wa
+      ? siteConfig.cta.bookReview
+      : hero.primaryCta.label;
 
   return (
     <>
@@ -50,8 +59,8 @@ export default function HomePage() {
             <p className="mb-3 max-w-[42ch] text-[1.12rem] text-ef-muted">{hero.sub}</p>
             <p className="mb-7 max-w-[46ch] text-base text-ef-muted">{hero.body}</p>
             <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href={hero.primaryCta.href} size="lg" className="w-full sm:w-auto">
-                {hero.primaryCta.label}
+              <ButtonLink href={primaryHref} size="lg" className="w-full sm:w-auto" external={primaryHref.startsWith("https://wa.me")}>
+                {primaryLabel}
               </ButtonLink>
               <ButtonLink href={hero.secondaryCta.href} variant="secondary" size="lg" className="w-full sm:w-auto">
                 {hero.secondaryCta.label}
@@ -260,7 +269,7 @@ export default function HomePage() {
         </Section>
       ) : null}
 
-      <CtaBand h2={finalCta.h2} body={finalCta.body} primaryLabel={finalCta.primaryCta.label} />
+      <CtaBand h2={finalCta.h2} body={finalCta.body} primaryLabel={finalCta.primaryCta.label} primaryHref={finalCta.primaryCta.href} />
     </>
   );
 }

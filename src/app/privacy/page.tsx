@@ -20,7 +20,7 @@ export default function Page() {
         We do not sell your data. Contact hello@eternalflow.co for privacy questions. Full policy copy will be finalized with legal review.
       </p>
       <div className="mt-8">
-        <ButtonLink href="/get-started">Book free review</ButtonLink>
+        <ButtonLink href="/get-started">Talk to Kalyan</ButtonLink>
       </div>
     </Section>
   );

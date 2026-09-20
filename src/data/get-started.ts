@@ -28,14 +28,14 @@ export const getStartedCopy = {
   whatsappPanel: {
     h2: "Prefer WhatsApp?",
     body: "Same free review. Tap through with a prefilled message.",
-    cta: "WhatsApp Kalyan",
+    cta: "Chat on WhatsApp",
   },
   next: {
     h2: "What happens next",
     steps: [
       {
         title: "You send details",
-        body: "Form or WhatsApp Kalyan.",
+        body: "Form or Chat on WhatsApp.",
       },
       {
         title: "We review",

@@ -3,15 +3,15 @@ export const homeCopy = {
   meta: {
     title: "Better Websites for Real Estate Builders & Agents | EternalFlow",
     description:
-      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Book a free review with Kalyan.",
+      "EternalFlow builds productized websites, CRM & ads for real estate builders and agents in India. Clear one-off packages. Talk to Kalyan on WhatsApp.",
   },
   hero: {
     brand: "EternalFlow",
     h1: "Better Websites For Real Estate Builders & Agents",
     sub: "Productized websites, CRM & ads for real estate builders and agents in India.",
     body: "Hyderabad-based. Project launches, agent brands, and WhatsApp enquiries that don't die in a chat thread.",
-    primaryCta: { label: "Book a free review with Kalyan", href: "/get-started" },
-    secondaryCta: { label: "See sample sites", href: "/work" },
+    primaryCta: { label: "Chat on WhatsApp", href: "whatsapp" },
+    secondaryCta: { label: "Talk to Kalyan", href: "/get-started" },
   },
   trust: [
     "Hyderabad",
@@ -102,12 +102,12 @@ export const homeCopy = {
     note: "Example quotes — labeled until we have permission to publish real ones.",
   },
   finalCta: {
-    h2: "Book a free review with Kalyan",
+    h2: "Talk to Kalyan",
     body: "No sales pitch. Gaps on your enquiry path → which package fits → clear next step on WhatsApp.",
     steps: [
       {
         title: "You reach out",
-        body: "WhatsApp Kalyan or the short form.",
+        body: "Chat on WhatsApp or the short form.",
       },
       {
         title: "We review",
@@ -118,7 +118,7 @@ export const homeCopy = {
         body: "Gaps, Starter / Growth / Pro, and how we start.",
       },
     ],
-    primaryCta: { label: "Book a free review with Kalyan", href: "/get-started" },
-    secondaryCta: { label: "WhatsApp Kalyan", href: "whatsapp" },
+    primaryCta: { label: "Talk to Kalyan", href: "/get-started" },
+    secondaryCta: { label: "Chat on WhatsApp", href: "whatsapp" },
   },
 } as const;

@@ -97,7 +97,7 @@ export default async function WorkDemoPage({
           </div>
         </div>
         <div className="mt-10">
-          <ButtonLink href="/get-started">Book a free website review</ButtonLink>
+          <ButtonLink href="/get-started">Talk to Kalyan</ButtonLink>
         </div>
       </Section>
     </>

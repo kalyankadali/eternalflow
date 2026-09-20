@@ -11,7 +11,7 @@ const columns = [
       { href: "/services", label: "Services" },
       { href: "/pricing", label: "Pricing" },
       { href: "/process", label: "Process" },
-      { href: "/get-started", label: "Book a free review with Kalyan" },
+      { href: "/get-started", label: "Talk to Kalyan" },
     ],
   },
   {

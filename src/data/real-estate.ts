@@ -31,5 +31,5 @@ export const realEstateCopy = {
     },
   ],
   sampleCta: { label: "See Lakeview Residences demo", href: "/work" },
-  cta: { label: "Book a free website review", href: "/get-started" },
+  cta: { label: "Talk to Kalyan", href: "/get-started" },
 } as const;

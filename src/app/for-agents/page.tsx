@@ -57,7 +57,7 @@ export default function ForAgentsPage() {
                   WhatsApp enquiries · <strong>captured</strong>
                 </div>
                 <div className="mt-2.5 rounded-full bg-ef-accent py-2 text-center text-[11px] font-bold text-ef-on-accent">
-                  WhatsApp Kalyan
+                  Chat on WhatsApp
                 </div>
               </div>
             </MockPhone>

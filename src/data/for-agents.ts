@@ -65,5 +65,5 @@ export const forAgentsCopy = {
     label: "See Ananya Rao demo",
     href: "/work/ananya-rao-hyderabad-realtor",
   },
-  cta: { label: "Book a free review with Kalyan", href: "/get-started" },
+  cta: { label: "Talk to Kalyan", href: "/get-started" },
 } as const;

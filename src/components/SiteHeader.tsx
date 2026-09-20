@@ -7,6 +7,8 @@ import { ButtonLink } from "./Button";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { siteConfig } from "@/lib/site";
 
 const nav = [
   { href: "/services", label: "Services" },
@@ -20,6 +22,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const wa = getWhatsAppUrl();
+  const ctaSize = scrolled ? "sm" : "md";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -39,7 +43,7 @@ export function SiteHeader() {
 
   return (
     <header className={`ef-header ${scrolled ? "is-scrolled" : ""}`}>
-      <Container className="flex items-center justify-between gap-3 py-3">
+      <Container className={`flex items-center justify-between gap-3 ${scrolled ? "py-2" : "py-3"}`}>
         <Logo />
 
         <nav className="hidden items-center gap-[22px] text-sm font-medium md:flex" aria-label="Primary">
@@ -64,15 +68,24 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <ButtonLink
-            href="/get-started"
-            size="md"
-            className="hidden sm:inline-flex"
-            aria-label="Book a free review with Kalyan"
-          >
-            <span className="lg:hidden">Book review</span>
-            <span className="hidden lg:inline">Review with Kalyan</span>
-          </ButtonLink>
+          {wa ? (
+            <ButtonLink
+              href={wa}
+              size={ctaSize}
+              className="hidden sm:inline-flex"
+              external
+            >
+              {siteConfig.cta.whatsapp}
+            </ButtonLink>
+          ) : (
+            <ButtonLink
+              href="/get-started"
+              size={ctaSize}
+              className="hidden sm:inline-flex"
+            >
+              {siteConfig.cta.bookReview}
+            </ButtonLink>
+          )}
           <button
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-ef-border bg-ef-surface text-ef-ink shadow-[var(--ef-shadow-sm)] md:hidden"
@@ -105,8 +118,18 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <ButtonLink href="/get-started" size="md" className="mt-1" aria-label="Book a free review with Kalyan">
-              Book review
+            {wa ? (
+              <ButtonLink href={wa} size="md" className="mt-1" external>
+                {siteConfig.cta.whatsapp}
+              </ButtonLink>
+            ) : null}
+            <ButtonLink
+              href="/get-started"
+              size="md"
+              variant={wa ? "secondary" : "primary"}
+              className="mt-1"
+            >
+              {siteConfig.cta.bookReview}
             </ButtonLink>
           </Container>
         </div>

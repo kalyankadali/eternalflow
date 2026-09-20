@@ -17,7 +17,7 @@ export type PricingTier = {
 const AI_VOICE =
   "AI Voice Assistant (answers inbound prospect calls, captures contact details, books appointments)";
 
-const BOOK = "Book a free review with Kalyan";
+const BOOK = "Talk to Kalyan";
 
 /** Canonical package copy — HANDOFF §5.3 + Week 1 copy. R1-locked INR in priceLabel. */
 export const pricingTiers: PricingTier[] = [

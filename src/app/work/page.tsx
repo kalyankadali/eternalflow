@@ -76,7 +76,7 @@ export default function WorkPage() {
 
       <CtaBand
         h2="Want a site like these for your project or brand?"
-        body="Book a free website review. We'll map the right package to how you get enquiries."
+        body="Talk to Kalyan. We'll map the right package to how you get enquiries."
       />
     </>
   );

@@ -17,10 +17,10 @@ export default function Page() {
         By using this site or booking a review, you agree to communicate in good faith and provide accurate contact details.
       </p>
       <p className="mt-3 max-w-2xl text-ef-muted">
-        Packages are one-off project fees. Optional monthly care after launch is ₹4,999/mo and separate. Questions: hello@eternalflow.co or WhatsApp Kalyan.
+        Packages are one-off project fees. Optional monthly care after launch is ₹4,999/mo and separate. Questions: hello@eternalflow.co or Chat on WhatsApp.
       </p>
       <div className="mt-8">
-        <ButtonLink href="/get-started">Book a free review with Kalyan</ButtonLink>
+        <ButtonLink href="/get-started">Talk to Kalyan</ButtonLink>
       </div>
     </Section>
   );
