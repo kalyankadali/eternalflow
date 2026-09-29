@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="112" fill="#ea8b4a"/>
-  <g fill="none" stroke="#fff8f1" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M96 208c112-96 224-96 336 0" stroke-width="40"/>
-    <path d="M96 320c112-96 224-96 336 0" stroke-width="28"/>
+  <g transform="translate(48,48) scale(4.3)">
+    <g fill="#fff8f1" stroke="none">
+      <path d="M22 62 C34 58, 42 48, 50 34 C56 44, 64 52, 78 56 C62 58, 48 62, 36 68 C30 66, 26 64, 22 62 Z"/>
+    </g>
+    <g fill="none" stroke="#fff8f1" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M36 30 C48 22, 62 24, 72 36" stroke-width="3.5"/>
+      <path d="M18 70 C36 62, 56 60, 82 66" stroke-width="4.5"/>
+    </g>
   </g>
 </svg>

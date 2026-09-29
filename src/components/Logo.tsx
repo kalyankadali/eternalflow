@@ -9,7 +9,7 @@ export function Logo({ href = "/", className = "" }: { href?: string; className?
     >
       {/* Light theme wordmark — primary lock: lowercase eternalflow.co */}
       <img
-        src="/brand/wordmark-eternalflow-co.svg"
+        src="/brand/wordmark-eternalflow-co.png"
         alt="eternalflow.co"
         width={168}
         height={36}
