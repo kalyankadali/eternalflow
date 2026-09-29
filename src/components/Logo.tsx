@@ -4,10 +4,27 @@ export function Logo({ href = "/", className = "" }: { href?: string; className?
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-2.5 text-[1.12rem] font-extrabold tracking-tight text-ef-ink no-underline hover:text-ef-ink hover:no-underline ${className}`}
+      className={`inline-flex items-center no-underline hover:no-underline ${className}`}
+      aria-label="eternalflow.co"
     >
-      <span className="ef-logo-mark">EF</span>
-      Eternal<span className="text-ef-accent">Flow</span>
+      {/* Light theme wordmark — primary lock: lowercase eternalflow.co */}
+      <img
+        src="/brand/wordmark-eternalflow-co.svg"
+        alt="eternalflow.co"
+        width={168}
+        height={36}
+        className="h-8 w-auto dark:hidden"
+        decoding="async"
+      />
+      {/* Dark theme wordmark */}
+      <img
+        src="/brand/wordmark-eternalflow-co-dark.svg"
+        alt="eternalflow.co"
+        width={168}
+        height={36}
+        className="hidden h-8 w-auto dark:block"
+        decoding="async"
+      />
     </Link>
   );
 }
