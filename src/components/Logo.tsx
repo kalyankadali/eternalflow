@@ -1,30 +1,25 @@
 import Link from "next/link";
 
+/** Header / footer: crest mark + typed eternalflow.co (locked primary) */
 export function Logo({ href = "/", className = "" }: { href?: string; className?: string }) {
   return (
     <Link
       href={href}
-      className={`inline-flex items-center no-underline hover:no-underline ${className}`}
+      className={`inline-flex shrink-0 items-center gap-2.5 no-underline hover:no-underline sm:gap-3 ${className}`}
       aria-label="eternalflow.co"
     >
-      {/* Light theme wordmark — primary lock: lowercase eternalflow.co */}
       <img
-        src="/brand/wordmark-eternalflow-co.png"
-        alt="eternalflow.co"
-        width={168}
-        height={36}
-        className="h-8 w-auto dark:hidden"
+        src="/brand/mark-crest.png"
+        alt=""
+        width={40}
+        height={40}
+        className="h-9 w-9 sm:h-10 sm:w-10"
         decoding="async"
       />
-      {/* Dark theme wordmark */}
-      <img
-        src="/brand/wordmark-eternalflow-co-dark.svg"
-        alt="eternalflow.co"
-        width={168}
-        height={36}
-        className="hidden h-8 w-auto dark:block"
-        decoding="async"
-      />
+      <span className="text-[1.25rem] font-semibold leading-none tracking-[-0.02em] sm:text-[1.5rem]">
+        <span className="text-ef-ink">eternalflow</span>
+        <span className="text-ef-accent">.co</span>
+      </span>
     </Link>
   );
 }
